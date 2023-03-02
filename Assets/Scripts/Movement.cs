@@ -20,6 +20,7 @@ public class Movement : MonoBehaviour
             Speed += 10f;
             Destroy(collision.gameObject);
         }
+        
 
     }
 }
