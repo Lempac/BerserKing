@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 90
+  controlID: 75
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -68,8 +68,8 @@ MonoBehaviour:
     y: 0
     width: 454
     height: 939
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -95,8 +95,8 @@ MonoBehaviour:
     y: 0
     width: 362
     height: 554
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
@@ -224,7 +224,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 91
+  controlID: 76
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -249,7 +249,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 92
+  controlID: 77
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -269,8 +269,8 @@ MonoBehaviour:
     y: 0
     width: 1104
     height: 554
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
@@ -313,8 +313,8 @@ MonoBehaviour:
   currentStatusEntriesHasUpdate: 1
   repositoryProgressHasUpdate: 1
   appManagerProgressHasUpdate: 1
-  changeTab: 2
-  activeTab: 2
+  changeTab: 3
+  activeTab: 3
   initProjectView:
     hasCompletedInitialCheck: 0
     isUserDataPresent: 0
@@ -461,10 +461,10 @@ MonoBehaviour:
     disableDelete: 1
     disableCreate: 1
     lastLocalAndRemoteBranchListChangedEvent:
-      updatedTimeString: 2023-03-01T12:14:35.227+02:00
+      updatedTimeString: 2023-03-01T18:38:06.218+02:00
       cacheType: 2
     lastCurrentBranchAndRemoteChange:
-      updatedTimeString: 2023-03-01T12:14:33.213+02:00
+      updatedTimeString: 2023-03-01T18:38:06.224+02:00
       cacheType: 1
     currentBranch:
       name: master
@@ -484,9 +484,9 @@ MonoBehaviour:
     - name: origin/master
       tracking: '[None]'
   changesView:
-    currentBranchHasUpdate: 0
-    currentStatusEntriesHasUpdate: 0
-    currentLocksHasUpdate: 0
+    currentBranchHasUpdate: 1
+    currentStatusEntriesHasUpdate: 1
+    currentLocksHasUpdate: 1
     commitBody: 
     commitMessage: 
     currentBranch: master
@@ -496,8 +496,46 @@ MonoBehaviour:
         keys: []
         values: []
       folders:
-        keys: []
-        values: []
+        keys:
+        - UserSettings
+        - UserSettings\Layouts
+        values:
+        - path: UserSettings
+          label: UserSettings
+          level: 0
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: UserSettings\Layouts
+          label: Layouts
+          level: 1
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
       checkedFileNodes:
         keys: []
         values: []
@@ -526,6 +564,60 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
+      - path: UserSettings
+        label: UserSettings
+        level: 0
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: UserSettings\Layouts
+        label: Layouts
+        level: 1
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: UserSettings\Layouts\default-2021.dwlt
+        label: default-2021.dwlt
+        level: 2
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: UserSettings\Layouts\default-2021.dwlt
+          fullPath: C:\Users\bruni\Documents\Vamp\UserSettings\Layouts\default-2021.dwlt
+          projectPath: UserSettings\Layouts\default-2021.dwlt
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 3
       selectedNode:
         path: 
         label: 
@@ -545,21 +637,459 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
-    gitStatusEntries: []
-    changedFilesText: No changed files
+    gitStatusEntries:
+    - path: UserSettings\Layouts\default-2021.dwlt
+      fullPath: C:\Users\bruni\Documents\Vamp\UserSettings\Layouts\default-2021.dwlt
+      projectPath: UserSettings\Layouts\default-2021.dwlt
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 3
+    changedFilesText: 1 changed file
     lastCurrentBranchChangedEvent:
-      updatedTimeString: 2023-03-01T12:14:33.213+02:00
+      updatedTimeString: 2023-03-01T22:57:39.449+02:00
       cacheType: 1
     lastStatusEntriesChangedEvent:
-      updatedTimeString: 2023-03-01T13:00:45.930+02:00
+      updatedTimeString: 2023-03-01T23:00:11.688+02:00
       cacheType: 6
     lastLocksChangedEvent:
-      updatedTimeString: 2023-03-01T13:00:23.117+02:00
+      updatedTimeString: 0001-01-01T00:00:00.000+00:00
       cacheType: 7
   historyView:
     currentLogHasUpdate: 0
     currentTrackingStatusHasUpdate: 0
     logEntries:
+    - commitID: f914c6f4dd17b19597abaa4ed5c5671f5a6e899a
+      mergeA: 
+      mergeB: 
+      authorName: 22DP3BBiks
+      authorEmail: 13DPBBiksis@rvt.lv
+      commitEmail: 13DPBBiksis@rvt.lv
+      commitName: 22DP3BBiks
+      summary: movement and something
+      description: 
+      timeString: 2023-03-01T18:37:56.000+02:00
+      commitTimeString: 2023-03-01T18:37:56.000+02:00
+      changes:
+      - path: Assets\Scenes\Main.unity
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\Scenes\Main.unity
+        projectPath: Assets\Scenes\Main.unity
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\Movement.cs
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\Scripts\Movement.cs
+        projectPath: Assets\Scripts\Movement.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Textures\basic.png
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\Textures\basic.png
+        projectPath: Assets\Textures\basic.png
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Textures\basic.png.meta
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\Textures\basic.png.meta
+        projectPath: Assets\Textures\basic.png.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\Test.prefab
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\Test.prefab
+        projectPath: Assets\TileMaps\Test.prefab
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_0.asset
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_0.asset
+        projectPath: Assets\TileMaps\basic_0.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_0.asset.meta
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_0.asset.meta
+        projectPath: Assets\TileMaps\basic_0.asset.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_1.asset
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_1.asset
+        projectPath: Assets\TileMaps\basic_1.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_1.asset.meta
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_1.asset.meta
+        projectPath: Assets\TileMaps\basic_1.asset.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_10.asset
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_10.asset
+        projectPath: Assets\TileMaps\basic_10.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_10.asset.meta
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_10.asset.meta
+        projectPath: Assets\TileMaps\basic_10.asset.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_11.asset
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_11.asset
+        projectPath: Assets\TileMaps\basic_11.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_11.asset.meta
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_11.asset.meta
+        projectPath: Assets\TileMaps\basic_11.asset.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_12.asset
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_12.asset
+        projectPath: Assets\TileMaps\basic_12.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_12.asset.meta
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_12.asset.meta
+        projectPath: Assets\TileMaps\basic_12.asset.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_13.asset
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_13.asset
+        projectPath: Assets\TileMaps\basic_13.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_13.asset.meta
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_13.asset.meta
+        projectPath: Assets\TileMaps\basic_13.asset.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_14.asset
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_14.asset
+        projectPath: Assets\TileMaps\basic_14.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_14.asset.meta
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_14.asset.meta
+        projectPath: Assets\TileMaps\basic_14.asset.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_15.asset
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_15.asset
+        projectPath: Assets\TileMaps\basic_15.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_15.asset.meta
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_15.asset.meta
+        projectPath: Assets\TileMaps\basic_15.asset.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_16.asset
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_16.asset
+        projectPath: Assets\TileMaps\basic_16.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_16.asset.meta
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_16.asset.meta
+        projectPath: Assets\TileMaps\basic_16.asset.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_17.asset
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_17.asset
+        projectPath: Assets\TileMaps\basic_17.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_17.asset.meta
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_17.asset.meta
+        projectPath: Assets\TileMaps\basic_17.asset.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_18.asset
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_18.asset
+        projectPath: Assets\TileMaps\basic_18.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_18.asset.meta
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_18.asset.meta
+        projectPath: Assets\TileMaps\basic_18.asset.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_19.asset
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_19.asset
+        projectPath: Assets\TileMaps\basic_19.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_19.asset.meta
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_19.asset.meta
+        projectPath: Assets\TileMaps\basic_19.asset.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_2.asset
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_2.asset
+        projectPath: Assets\TileMaps\basic_2.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_2.asset.meta
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_2.asset.meta
+        projectPath: Assets\TileMaps\basic_2.asset.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_20.asset
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_20.asset
+        projectPath: Assets\TileMaps\basic_20.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_20.asset.meta
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_20.asset.meta
+        projectPath: Assets\TileMaps\basic_20.asset.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_21.asset
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_21.asset
+        projectPath: Assets\TileMaps\basic_21.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_21.asset.meta
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_21.asset.meta
+        projectPath: Assets\TileMaps\basic_21.asset.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_22.asset
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_22.asset
+        projectPath: Assets\TileMaps\basic_22.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_22.asset.meta
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_22.asset.meta
+        projectPath: Assets\TileMaps\basic_22.asset.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_23.asset
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_23.asset
+        projectPath: Assets\TileMaps\basic_23.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_23.asset.meta
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_23.asset.meta
+        projectPath: Assets\TileMaps\basic_23.asset.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_24.asset
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_24.asset
+        projectPath: Assets\TileMaps\basic_24.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_24.asset.meta
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_24.asset.meta
+        projectPath: Assets\TileMaps\basic_24.asset.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_25.asset
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_25.asset
+        projectPath: Assets\TileMaps\basic_25.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_25.asset.meta
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_25.asset.meta
+        projectPath: Assets\TileMaps\basic_25.asset.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_26.asset
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_26.asset
+        projectPath: Assets\TileMaps\basic_26.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_26.asset.meta
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_26.asset.meta
+        projectPath: Assets\TileMaps\basic_26.asset.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_27.asset
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_27.asset
+        projectPath: Assets\TileMaps\basic_27.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_27.asset.meta
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_27.asset.meta
+        projectPath: Assets\TileMaps\basic_27.asset.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_28.asset
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_28.asset
+        projectPath: Assets\TileMaps\basic_28.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_28.asset.meta
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_28.asset.meta
+        projectPath: Assets\TileMaps\basic_28.asset.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_29.asset
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_29.asset
+        projectPath: Assets\TileMaps\basic_29.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_29.asset.meta
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_29.asset.meta
+        projectPath: Assets\TileMaps\basic_29.asset.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_3.asset
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_3.asset
+        projectPath: Assets\TileMaps\basic_3.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_3.asset.meta
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_3.asset.meta
+        projectPath: Assets\TileMaps\basic_3.asset.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_30.asset
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_30.asset
+        projectPath: Assets\TileMaps\basic_30.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_30.asset.meta
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_30.asset.meta
+        projectPath: Assets\TileMaps\basic_30.asset.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_31.asset
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_31.asset
+        projectPath: Assets\TileMaps\basic_31.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_31.asset.meta
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_31.asset.meta
+        projectPath: Assets\TileMaps\basic_31.asset.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_4.asset
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_4.asset
+        projectPath: Assets\TileMaps\basic_4.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_4.asset.meta
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_4.asset.meta
+        projectPath: Assets\TileMaps\basic_4.asset.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_5.asset
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_5.asset
+        projectPath: Assets\TileMaps\basic_5.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_5.asset.meta
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_5.asset.meta
+        projectPath: Assets\TileMaps\basic_5.asset.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_6.asset
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_6.asset
+        projectPath: Assets\TileMaps\basic_6.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_6.asset.meta
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_6.asset.meta
+        projectPath: Assets\TileMaps\basic_6.asset.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_7.asset
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_7.asset
+        projectPath: Assets\TileMaps\basic_7.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_7.asset.meta
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_7.asset.meta
+        projectPath: Assets\TileMaps\basic_7.asset.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_8.asset
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_8.asset
+        projectPath: Assets\TileMaps\basic_8.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_8.asset.meta
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_8.asset.meta
+        projectPath: Assets\TileMaps\basic_8.asset.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_9.asset
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_9.asset
+        projectPath: Assets\TileMaps\basic_9.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_9.asset.meta
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_9.asset.meta
+        projectPath: Assets\TileMaps\basic_9.asset.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: UserSettings\Layouts\default-2021.dwlt
+        fullPath: C:\Users\bruni\Documents\Vamp\UserSettings\Layouts\default-2021.dwlt
+        projectPath: UserSettings\Layouts\default-2021.dwlt
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
     - commitID: 45fd51f55ec484b99935c4e014ea61432d69d6d4
       mergeA: 
       mergeB: 
@@ -892,14 +1422,446 @@ MonoBehaviour:
         workTreeStatus: 0
     statusAhead: 0
     lastLogChangedEvent:
-      updatedTimeString: 2023-03-01T13:22:17.715+02:00
+      updatedTimeString: 2023-03-01T20:37:34.466+02:00
       cacheType: 3
     lastTrackingStatusChangedEvent:
-      updatedTimeString: 2023-03-01T13:22:18.049+02:00
+      updatedTimeString: 2023-03-01T20:37:34.459+02:00
       cacheType: 5
     historyControl:
       scroll: {x: 0, y: 0}
       entries:
+      - commitID: f914c6f4dd17b19597abaa4ed5c5671f5a6e899a
+        mergeA: 
+        mergeB: 
+        authorName: 22DP3BBiks
+        authorEmail: 13DPBBiksis@rvt.lv
+        commitEmail: 13DPBBiksis@rvt.lv
+        commitName: 22DP3BBiks
+        summary: movement and something
+        description: 
+        timeString: 2023-03-01T18:37:56.000+02:00
+        commitTimeString: 2023-03-01T18:37:56.000+02:00
+        changes:
+        - path: Assets\Scenes\Main.unity
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\Scenes\Main.unity
+          projectPath: Assets\Scenes\Main.unity
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\Movement.cs
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\Scripts\Movement.cs
+          projectPath: Assets\Scripts\Movement.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Textures\basic.png
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\Textures\basic.png
+          projectPath: Assets\Textures\basic.png
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Textures\basic.png.meta
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\Textures\basic.png.meta
+          projectPath: Assets\Textures\basic.png.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\TileMaps\Test.prefab
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\Test.prefab
+          projectPath: Assets\TileMaps\Test.prefab
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\TileMaps\basic_0.asset
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_0.asset
+          projectPath: Assets\TileMaps\basic_0.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\TileMaps\basic_0.asset.meta
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_0.asset.meta
+          projectPath: Assets\TileMaps\basic_0.asset.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\TileMaps\basic_1.asset
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_1.asset
+          projectPath: Assets\TileMaps\basic_1.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\TileMaps\basic_1.asset.meta
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_1.asset.meta
+          projectPath: Assets\TileMaps\basic_1.asset.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\TileMaps\basic_10.asset
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_10.asset
+          projectPath: Assets\TileMaps\basic_10.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\TileMaps\basic_10.asset.meta
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_10.asset.meta
+          projectPath: Assets\TileMaps\basic_10.asset.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\TileMaps\basic_11.asset
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_11.asset
+          projectPath: Assets\TileMaps\basic_11.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\TileMaps\basic_11.asset.meta
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_11.asset.meta
+          projectPath: Assets\TileMaps\basic_11.asset.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\TileMaps\basic_12.asset
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_12.asset
+          projectPath: Assets\TileMaps\basic_12.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\TileMaps\basic_12.asset.meta
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_12.asset.meta
+          projectPath: Assets\TileMaps\basic_12.asset.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\TileMaps\basic_13.asset
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_13.asset
+          projectPath: Assets\TileMaps\basic_13.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\TileMaps\basic_13.asset.meta
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_13.asset.meta
+          projectPath: Assets\TileMaps\basic_13.asset.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\TileMaps\basic_14.asset
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_14.asset
+          projectPath: Assets\TileMaps\basic_14.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\TileMaps\basic_14.asset.meta
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_14.asset.meta
+          projectPath: Assets\TileMaps\basic_14.asset.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\TileMaps\basic_15.asset
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_15.asset
+          projectPath: Assets\TileMaps\basic_15.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\TileMaps\basic_15.asset.meta
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_15.asset.meta
+          projectPath: Assets\TileMaps\basic_15.asset.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\TileMaps\basic_16.asset
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_16.asset
+          projectPath: Assets\TileMaps\basic_16.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\TileMaps\basic_16.asset.meta
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_16.asset.meta
+          projectPath: Assets\TileMaps\basic_16.asset.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\TileMaps\basic_17.asset
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_17.asset
+          projectPath: Assets\TileMaps\basic_17.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\TileMaps\basic_17.asset.meta
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_17.asset.meta
+          projectPath: Assets\TileMaps\basic_17.asset.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\TileMaps\basic_18.asset
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_18.asset
+          projectPath: Assets\TileMaps\basic_18.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\TileMaps\basic_18.asset.meta
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_18.asset.meta
+          projectPath: Assets\TileMaps\basic_18.asset.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\TileMaps\basic_19.asset
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_19.asset
+          projectPath: Assets\TileMaps\basic_19.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\TileMaps\basic_19.asset.meta
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_19.asset.meta
+          projectPath: Assets\TileMaps\basic_19.asset.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\TileMaps\basic_2.asset
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_2.asset
+          projectPath: Assets\TileMaps\basic_2.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\TileMaps\basic_2.asset.meta
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_2.asset.meta
+          projectPath: Assets\TileMaps\basic_2.asset.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\TileMaps\basic_20.asset
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_20.asset
+          projectPath: Assets\TileMaps\basic_20.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\TileMaps\basic_20.asset.meta
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_20.asset.meta
+          projectPath: Assets\TileMaps\basic_20.asset.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\TileMaps\basic_21.asset
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_21.asset
+          projectPath: Assets\TileMaps\basic_21.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\TileMaps\basic_21.asset.meta
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_21.asset.meta
+          projectPath: Assets\TileMaps\basic_21.asset.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\TileMaps\basic_22.asset
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_22.asset
+          projectPath: Assets\TileMaps\basic_22.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\TileMaps\basic_22.asset.meta
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_22.asset.meta
+          projectPath: Assets\TileMaps\basic_22.asset.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\TileMaps\basic_23.asset
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_23.asset
+          projectPath: Assets\TileMaps\basic_23.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\TileMaps\basic_23.asset.meta
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_23.asset.meta
+          projectPath: Assets\TileMaps\basic_23.asset.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\TileMaps\basic_24.asset
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_24.asset
+          projectPath: Assets\TileMaps\basic_24.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\TileMaps\basic_24.asset.meta
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_24.asset.meta
+          projectPath: Assets\TileMaps\basic_24.asset.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\TileMaps\basic_25.asset
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_25.asset
+          projectPath: Assets\TileMaps\basic_25.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\TileMaps\basic_25.asset.meta
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_25.asset.meta
+          projectPath: Assets\TileMaps\basic_25.asset.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\TileMaps\basic_26.asset
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_26.asset
+          projectPath: Assets\TileMaps\basic_26.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\TileMaps\basic_26.asset.meta
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_26.asset.meta
+          projectPath: Assets\TileMaps\basic_26.asset.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\TileMaps\basic_27.asset
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_27.asset
+          projectPath: Assets\TileMaps\basic_27.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\TileMaps\basic_27.asset.meta
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_27.asset.meta
+          projectPath: Assets\TileMaps\basic_27.asset.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\TileMaps\basic_28.asset
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_28.asset
+          projectPath: Assets\TileMaps\basic_28.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\TileMaps\basic_28.asset.meta
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_28.asset.meta
+          projectPath: Assets\TileMaps\basic_28.asset.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\TileMaps\basic_29.asset
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_29.asset
+          projectPath: Assets\TileMaps\basic_29.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\TileMaps\basic_29.asset.meta
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_29.asset.meta
+          projectPath: Assets\TileMaps\basic_29.asset.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\TileMaps\basic_3.asset
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_3.asset
+          projectPath: Assets\TileMaps\basic_3.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\TileMaps\basic_3.asset.meta
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_3.asset.meta
+          projectPath: Assets\TileMaps\basic_3.asset.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\TileMaps\basic_30.asset
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_30.asset
+          projectPath: Assets\TileMaps\basic_30.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\TileMaps\basic_30.asset.meta
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_30.asset.meta
+          projectPath: Assets\TileMaps\basic_30.asset.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\TileMaps\basic_31.asset
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_31.asset
+          projectPath: Assets\TileMaps\basic_31.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\TileMaps\basic_31.asset.meta
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_31.asset.meta
+          projectPath: Assets\TileMaps\basic_31.asset.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\TileMaps\basic_4.asset
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_4.asset
+          projectPath: Assets\TileMaps\basic_4.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\TileMaps\basic_4.asset.meta
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_4.asset.meta
+          projectPath: Assets\TileMaps\basic_4.asset.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\TileMaps\basic_5.asset
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_5.asset
+          projectPath: Assets\TileMaps\basic_5.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\TileMaps\basic_5.asset.meta
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_5.asset.meta
+          projectPath: Assets\TileMaps\basic_5.asset.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\TileMaps\basic_6.asset
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_6.asset
+          projectPath: Assets\TileMaps\basic_6.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\TileMaps\basic_6.asset.meta
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_6.asset.meta
+          projectPath: Assets\TileMaps\basic_6.asset.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\TileMaps\basic_7.asset
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_7.asset
+          projectPath: Assets\TileMaps\basic_7.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\TileMaps\basic_7.asset.meta
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_7.asset.meta
+          projectPath: Assets\TileMaps\basic_7.asset.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\TileMaps\basic_8.asset
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_8.asset
+          projectPath: Assets\TileMaps\basic_8.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\TileMaps\basic_8.asset.meta
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_8.asset.meta
+          projectPath: Assets\TileMaps\basic_8.asset.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\TileMaps\basic_9.asset
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_9.asset
+          projectPath: Assets\TileMaps\basic_9.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\TileMaps\basic_9.asset.meta
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_9.asset.meta
+          projectPath: Assets\TileMaps\basic_9.asset.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: UserSettings\Layouts\default-2021.dwlt
+          fullPath: C:\Users\bruni\Documents\Vamp\UserSettings\Layouts\default-2021.dwlt
+          projectPath: UserSettings\Layouts\default-2021.dwlt
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
       - commitID: 45fd51f55ec484b99935c4e014ea61432d69d6d4
         mergeA: 
         mergeB: 
@@ -1231,71 +2193,41 @@ MonoBehaviour:
           indexStatus: 4
           workTreeStatus: 0
       statusAhead: 0
-      selectedIndex: 0
+      selectedIndex: -1
     selectedEntry:
-      commitID: 45fd51f55ec484b99935c4e014ea61432d69d6d4
+      commitID: 
       mergeA: 
       mergeB: 
-      authorName: 22DP3BBiks
-      authorEmail: 13DPBBiksis@rvt.lv
-      commitEmail: 13DPBBiksis@rvt.lv
-      commitName: 22DP3BBiks
-      summary: some player
+      authorName: 
+      authorEmail: 
+      commitEmail: 
+      commitName: 
+      summary: 
       description: 
-      timeString: 2023-03-01T13:00:44.000+02:00
-      commitTimeString: 2023-03-01T13:00:44.000+02:00
+      timeString: 0001-01-01T00:00:00.000+00:00
+      commitTimeString: 0001-01-01T00:00:00.000+00:00
       changes:
-      - path: .vsconfig
-        fullPath: C:\Users\bruni\Documents\Vamp\.vsconfig
-        projectPath: .vsconfig
-        originalPath: 
-        indexStatus: 4
-        workTreeStatus: 0
       - path: Assets\Scenes\Main.unity
         fullPath: C:\Users\bruni\Documents\Vamp\Assets\Scenes\Main.unity
         projectPath: Assets\Scenes\Main.unity
         originalPath: 
-        indexStatus: 4
-        workTreeStatus: 0
-      - path: Assets\Scenes\Main.unity.meta
-        fullPath: C:\Users\bruni\Documents\Vamp\Assets\Scenes\Main.unity.meta
-        projectPath: Assets\Scenes\Main.unity.meta
-        originalPath: Assets\Scenes\SampleScene.unity.meta
-        indexStatus: 6
-        workTreeStatus: 0
-      - path: Assets\Scenes\SampleScene.unity
-        fullPath: C:\Users\bruni\Documents\Vamp\Assets\Scenes\SampleScene.unity
-        projectPath: Assets\Scenes\SampleScene.unity
-        originalPath: 
-        indexStatus: 5
-        workTreeStatus: 0
-      - path: Assets\Scripts.meta
-        fullPath: C:\Users\bruni\Documents\Vamp\Assets\Scripts.meta
-        projectPath: Assets\Scripts.meta
-        originalPath: 
-        indexStatus: 4
+        indexStatus: 3
         workTreeStatus: 0
       - path: Assets\Scripts\Movement.cs
         fullPath: C:\Users\bruni\Documents\Vamp\Assets\Scripts\Movement.cs
         projectPath: Assets\Scripts\Movement.cs
         originalPath: 
-        indexStatus: 4
+        indexStatus: 3
         workTreeStatus: 0
-      - path: Assets\Scripts\Movement.cs.meta
-        fullPath: C:\Users\bruni\Documents\Vamp\Assets\Scripts\Movement.cs.meta
-        projectPath: Assets\Scripts\Movement.cs.meta
+      - path: Assets\Textures\basic.png
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\Textures\basic.png
+        projectPath: Assets\Textures\basic.png
         originalPath: 
         indexStatus: 4
         workTreeStatus: 0
-      - path: Assets\Textures.meta
-        fullPath: C:\Users\bruni\Documents\Vamp\Assets\Textures.meta
-        projectPath: Assets\Textures.meta
-        originalPath: 
-        indexStatus: 4
-        workTreeStatus: 0
-      - path: Assets\TileMaps.meta
-        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps.meta
-        projectPath: Assets\TileMaps.meta
+      - path: Assets\Textures\basic.png.meta
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\Textures\basic.png.meta
+        projectPath: Assets\Textures\basic.png.meta
         originalPath: 
         indexStatus: 4
         workTreeStatus: 0
@@ -1303,25 +2235,397 @@ MonoBehaviour:
         fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\Test.prefab
         projectPath: Assets\TileMaps\Test.prefab
         originalPath: 
-        indexStatus: 4
-        workTreeStatus: 0
-      - path: Assets\TileMaps\Test.prefab.meta
-        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\Test.prefab.meta
-        projectPath: Assets\TileMaps\Test.prefab.meta
-        originalPath: 
-        indexStatus: 4
-        workTreeStatus: 0
-      - path: ProjectSettings\EditorBuildSettings.asset
-        fullPath: C:\Users\bruni\Documents\Vamp\ProjectSettings\EditorBuildSettings.asset
-        projectPath: ProjectSettings\EditorBuildSettings.asset
-        originalPath: 
         indexStatus: 3
         workTreeStatus: 0
-      - path: ProjectSettings\SceneTemplateSettings.json
-        fullPath: C:\Users\bruni\Documents\Vamp\ProjectSettings\SceneTemplateSettings.json
-        projectPath: ProjectSettings\SceneTemplateSettings.json
+      - path: Assets\TileMaps\basic_0.asset
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_0.asset
+        projectPath: Assets\TileMaps\basic_0.asset
         originalPath: 
         indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_0.asset.meta
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_0.asset.meta
+        projectPath: Assets\TileMaps\basic_0.asset.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_1.asset
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_1.asset
+        projectPath: Assets\TileMaps\basic_1.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_1.asset.meta
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_1.asset.meta
+        projectPath: Assets\TileMaps\basic_1.asset.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_10.asset
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_10.asset
+        projectPath: Assets\TileMaps\basic_10.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_10.asset.meta
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_10.asset.meta
+        projectPath: Assets\TileMaps\basic_10.asset.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_11.asset
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_11.asset
+        projectPath: Assets\TileMaps\basic_11.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_11.asset.meta
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_11.asset.meta
+        projectPath: Assets\TileMaps\basic_11.asset.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_12.asset
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_12.asset
+        projectPath: Assets\TileMaps\basic_12.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_12.asset.meta
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_12.asset.meta
+        projectPath: Assets\TileMaps\basic_12.asset.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_13.asset
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_13.asset
+        projectPath: Assets\TileMaps\basic_13.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_13.asset.meta
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_13.asset.meta
+        projectPath: Assets\TileMaps\basic_13.asset.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_14.asset
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_14.asset
+        projectPath: Assets\TileMaps\basic_14.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_14.asset.meta
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_14.asset.meta
+        projectPath: Assets\TileMaps\basic_14.asset.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_15.asset
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_15.asset
+        projectPath: Assets\TileMaps\basic_15.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_15.asset.meta
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_15.asset.meta
+        projectPath: Assets\TileMaps\basic_15.asset.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_16.asset
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_16.asset
+        projectPath: Assets\TileMaps\basic_16.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_16.asset.meta
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_16.asset.meta
+        projectPath: Assets\TileMaps\basic_16.asset.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_17.asset
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_17.asset
+        projectPath: Assets\TileMaps\basic_17.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_17.asset.meta
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_17.asset.meta
+        projectPath: Assets\TileMaps\basic_17.asset.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_18.asset
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_18.asset
+        projectPath: Assets\TileMaps\basic_18.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_18.asset.meta
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_18.asset.meta
+        projectPath: Assets\TileMaps\basic_18.asset.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_19.asset
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_19.asset
+        projectPath: Assets\TileMaps\basic_19.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_19.asset.meta
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_19.asset.meta
+        projectPath: Assets\TileMaps\basic_19.asset.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_2.asset
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_2.asset
+        projectPath: Assets\TileMaps\basic_2.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_2.asset.meta
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_2.asset.meta
+        projectPath: Assets\TileMaps\basic_2.asset.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_20.asset
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_20.asset
+        projectPath: Assets\TileMaps\basic_20.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_20.asset.meta
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_20.asset.meta
+        projectPath: Assets\TileMaps\basic_20.asset.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_21.asset
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_21.asset
+        projectPath: Assets\TileMaps\basic_21.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_21.asset.meta
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_21.asset.meta
+        projectPath: Assets\TileMaps\basic_21.asset.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_22.asset
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_22.asset
+        projectPath: Assets\TileMaps\basic_22.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_22.asset.meta
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_22.asset.meta
+        projectPath: Assets\TileMaps\basic_22.asset.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_23.asset
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_23.asset
+        projectPath: Assets\TileMaps\basic_23.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_23.asset.meta
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_23.asset.meta
+        projectPath: Assets\TileMaps\basic_23.asset.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_24.asset
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_24.asset
+        projectPath: Assets\TileMaps\basic_24.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_24.asset.meta
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_24.asset.meta
+        projectPath: Assets\TileMaps\basic_24.asset.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_25.asset
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_25.asset
+        projectPath: Assets\TileMaps\basic_25.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_25.asset.meta
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_25.asset.meta
+        projectPath: Assets\TileMaps\basic_25.asset.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_26.asset
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_26.asset
+        projectPath: Assets\TileMaps\basic_26.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_26.asset.meta
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_26.asset.meta
+        projectPath: Assets\TileMaps\basic_26.asset.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_27.asset
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_27.asset
+        projectPath: Assets\TileMaps\basic_27.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_27.asset.meta
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_27.asset.meta
+        projectPath: Assets\TileMaps\basic_27.asset.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_28.asset
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_28.asset
+        projectPath: Assets\TileMaps\basic_28.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_28.asset.meta
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_28.asset.meta
+        projectPath: Assets\TileMaps\basic_28.asset.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_29.asset
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_29.asset
+        projectPath: Assets\TileMaps\basic_29.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_29.asset.meta
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_29.asset.meta
+        projectPath: Assets\TileMaps\basic_29.asset.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_3.asset
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_3.asset
+        projectPath: Assets\TileMaps\basic_3.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_3.asset.meta
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_3.asset.meta
+        projectPath: Assets\TileMaps\basic_3.asset.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_30.asset
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_30.asset
+        projectPath: Assets\TileMaps\basic_30.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_30.asset.meta
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_30.asset.meta
+        projectPath: Assets\TileMaps\basic_30.asset.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_31.asset
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_31.asset
+        projectPath: Assets\TileMaps\basic_31.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_31.asset.meta
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_31.asset.meta
+        projectPath: Assets\TileMaps\basic_31.asset.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_4.asset
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_4.asset
+        projectPath: Assets\TileMaps\basic_4.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_4.asset.meta
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_4.asset.meta
+        projectPath: Assets\TileMaps\basic_4.asset.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_5.asset
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_5.asset
+        projectPath: Assets\TileMaps\basic_5.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_5.asset.meta
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_5.asset.meta
+        projectPath: Assets\TileMaps\basic_5.asset.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_6.asset
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_6.asset
+        projectPath: Assets\TileMaps\basic_6.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_6.asset.meta
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_6.asset.meta
+        projectPath: Assets\TileMaps\basic_6.asset.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_7.asset
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_7.asset
+        projectPath: Assets\TileMaps\basic_7.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_7.asset.meta
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_7.asset.meta
+        projectPath: Assets\TileMaps\basic_7.asset.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_8.asset
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_8.asset
+        projectPath: Assets\TileMaps\basic_8.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_8.asset.meta
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_8.asset.meta
+        projectPath: Assets\TileMaps\basic_8.asset.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_9.asset
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_9.asset
+        projectPath: Assets\TileMaps\basic_9.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TileMaps\basic_9.asset.meta
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_9.asset.meta
+        projectPath: Assets\TileMaps\basic_9.asset.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: UserSettings\Layouts\default-2021.dwlt
+        fullPath: C:\Users\bruni\Documents\Vamp\UserSettings\Layouts\default-2021.dwlt
+        projectPath: UserSettings\Layouts\default-2021.dwlt
+        originalPath: 
+        indexStatus: 3
         workTreeStatus: 0
     treeChanges:
       assets:
@@ -1332,8 +2636,10 @@ MonoBehaviour:
         - Assets
         - Assets\Scenes
         - Assets\Scripts
+        - Assets\Textures
         - Assets\TileMaps
-        - ProjectSettings
+        - UserSettings
+        - UserSettings\Layouts
         values:
         - path: Assets
           label: Assets
@@ -1389,6 +2695,24 @@ MonoBehaviour:
             originalPath: 
             indexStatus: 0
             workTreeStatus: 0
+        - path: Assets\Textures
+          label: Textures
+          level: 1
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 0
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
         - path: Assets\TileMaps
           label: TileMaps
           level: 1
@@ -1407,9 +2731,27 @@ MonoBehaviour:
             originalPath: 
             indexStatus: 0
             workTreeStatus: 0
-        - path: ProjectSettings
-          label: ProjectSettings
+        - path: UserSettings
+          label: UserSettings
           level: 0
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 0
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: UserSettings\Layouts
+          label: Layouts
+          level: 1
           isFolder: 1
           isContainer: 0
           isCollapsed: 0
@@ -1453,24 +2795,6 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
-      - path: .vsconfig
-        label: .vsconfig
-        level: 0
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 0
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: .vsconfig
-          fullPath: C:\Users\bruni\Documents\Vamp\.vsconfig
-          projectPath: .vsconfig
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
       - path: Assets
         label: Assets
         level: 0
@@ -1511,7 +2835,7 @@ MonoBehaviour:
         label: Main.unity
         level: 2
         isFolder: 0
-        isContainer: 1
+        isContainer: 0
         isCollapsed: 0
         isHidden: 0
         isActive: 0
@@ -1523,61 +2847,7 @@ MonoBehaviour:
           fullPath: C:\Users\bruni\Documents\Vamp\Assets\Scenes\Main.unity
           projectPath: Assets\Scenes\Main.unity
           originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-      - path: Assets\Scenes\Main.unity.meta
-        label: Main.unity.meta
-        level: 3
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 0
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Scenes\Main.unity.meta
-          fullPath: C:\Users\bruni\Documents\Vamp\Assets\Scenes\Main.unity.meta
-          projectPath: Assets\Scenes\Main.unity.meta
-          originalPath: Assets\Scenes\SampleScene.unity.meta
-          indexStatus: 6
-          workTreeStatus: 0
-      - path: Assets\Scenes\SampleScene.unity
-        label: SampleScene.unity
-        level: 2
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 0
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Scenes\SampleScene.unity
-          fullPath: C:\Users\bruni\Documents\Vamp\Assets\Scenes\SampleScene.unity
-          projectPath: Assets\Scenes\SampleScene.unity
-          originalPath: 
-          indexStatus: 5
-          workTreeStatus: 0
-      - path: Assets\Scripts.meta
-        label: Scripts.meta
-        level: 1
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 0
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Scripts.meta
-          fullPath: C:\Users\bruni\Documents\Vamp\Assets\Scripts.meta
-          projectPath: Assets\Scripts.meta
-          originalPath: 
-          indexStatus: 4
+          indexStatus: 3
           workTreeStatus: 0
       - path: Assets\Scripts
         label: Scripts
@@ -1601,7 +2871,7 @@ MonoBehaviour:
         label: Movement.cs
         level: 2
         isFolder: 0
-        isContainer: 1
+        isContainer: 0
         isCollapsed: 0
         isHidden: 0
         isActive: 0
@@ -1613,10 +2883,46 @@ MonoBehaviour:
           fullPath: C:\Users\bruni\Documents\Vamp\Assets\Scripts\Movement.cs
           projectPath: Assets\Scripts\Movement.cs
           originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - path: Assets\Textures
+        label: Textures
+        level: 1
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\Textures\basic.png
+        label: basic.png
+        level: 2
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Textures\basic.png
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\Textures\basic.png
+          projectPath: Assets\Textures\basic.png
+          originalPath: 
           indexStatus: 4
           workTreeStatus: 0
-      - path: Assets\Scripts\Movement.cs.meta
-        label: Movement.cs.meta
+      - path: Assets\Textures\basic.png.meta
+        label: basic.png.meta
         level: 3
         isFolder: 0
         isContainer: 0
@@ -1627,45 +2933,9 @@ MonoBehaviour:
         checkState: 0
         isLocked: 0
         gitStatusEntry:
-          path: Assets\Scripts\Movement.cs.meta
-          fullPath: C:\Users\bruni\Documents\Vamp\Assets\Scripts\Movement.cs.meta
-          projectPath: Assets\Scripts\Movement.cs.meta
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-      - path: Assets\Textures.meta
-        label: Textures.meta
-        level: 1
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 0
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Textures.meta
-          fullPath: C:\Users\bruni\Documents\Vamp\Assets\Textures.meta
-          projectPath: Assets\Textures.meta
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-      - path: Assets\TileMaps.meta
-        label: TileMaps.meta
-        level: 1
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 0
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\TileMaps.meta
-          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps.meta
-          projectPath: Assets\TileMaps.meta
+          path: Assets\Textures\basic.png.meta
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\Textures\basic.png.meta
+          projectPath: Assets\Textures\basic.png.meta
           originalPath: 
           indexStatus: 4
           workTreeStatus: 0
@@ -1691,7 +2961,7 @@ MonoBehaviour:
         label: Test.prefab
         level: 2
         isFolder: 0
-        isContainer: 1
+        isContainer: 0
         isCollapsed: 0
         isHidden: 0
         isActive: 0
@@ -1703,10 +2973,28 @@ MonoBehaviour:
           fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\Test.prefab
           projectPath: Assets\TileMaps\Test.prefab
           originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - path: Assets\TileMaps\basic_0.asset
+        label: basic_0.asset
+        level: 2
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TileMaps\basic_0.asset
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_0.asset
+          projectPath: Assets\TileMaps\basic_0.asset
+          originalPath: 
           indexStatus: 4
           workTreeStatus: 0
-      - path: Assets\TileMaps\Test.prefab.meta
-        label: Test.prefab.meta
+      - path: Assets\TileMaps\basic_0.asset.meta
+        label: basic_0.asset.meta
         level: 3
         isFolder: 0
         isContainer: 0
@@ -1717,14 +3005,1130 @@ MonoBehaviour:
         checkState: 0
         isLocked: 0
         gitStatusEntry:
-          path: Assets\TileMaps\Test.prefab.meta
-          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\Test.prefab.meta
-          projectPath: Assets\TileMaps\Test.prefab.meta
+          path: Assets\TileMaps\basic_0.asset.meta
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_0.asset.meta
+          projectPath: Assets\TileMaps\basic_0.asset.meta
           originalPath: 
           indexStatus: 4
           workTreeStatus: 0
-      - path: ProjectSettings
-        label: ProjectSettings
+      - path: Assets\TileMaps\basic_1.asset
+        label: basic_1.asset
+        level: 2
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TileMaps\basic_1.asset
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_1.asset
+          projectPath: Assets\TileMaps\basic_1.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TileMaps\basic_1.asset.meta
+        label: basic_1.asset.meta
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TileMaps\basic_1.asset.meta
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_1.asset.meta
+          projectPath: Assets\TileMaps\basic_1.asset.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TileMaps\basic_10.asset
+        label: basic_10.asset
+        level: 2
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TileMaps\basic_10.asset
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_10.asset
+          projectPath: Assets\TileMaps\basic_10.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TileMaps\basic_10.asset.meta
+        label: basic_10.asset.meta
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TileMaps\basic_10.asset.meta
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_10.asset.meta
+          projectPath: Assets\TileMaps\basic_10.asset.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TileMaps\basic_11.asset
+        label: basic_11.asset
+        level: 2
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TileMaps\basic_11.asset
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_11.asset
+          projectPath: Assets\TileMaps\basic_11.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TileMaps\basic_11.asset.meta
+        label: basic_11.asset.meta
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TileMaps\basic_11.asset.meta
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_11.asset.meta
+          projectPath: Assets\TileMaps\basic_11.asset.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TileMaps\basic_12.asset
+        label: basic_12.asset
+        level: 2
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TileMaps\basic_12.asset
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_12.asset
+          projectPath: Assets\TileMaps\basic_12.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TileMaps\basic_12.asset.meta
+        label: basic_12.asset.meta
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TileMaps\basic_12.asset.meta
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_12.asset.meta
+          projectPath: Assets\TileMaps\basic_12.asset.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TileMaps\basic_13.asset
+        label: basic_13.asset
+        level: 2
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TileMaps\basic_13.asset
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_13.asset
+          projectPath: Assets\TileMaps\basic_13.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TileMaps\basic_13.asset.meta
+        label: basic_13.asset.meta
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TileMaps\basic_13.asset.meta
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_13.asset.meta
+          projectPath: Assets\TileMaps\basic_13.asset.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TileMaps\basic_14.asset
+        label: basic_14.asset
+        level: 2
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TileMaps\basic_14.asset
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_14.asset
+          projectPath: Assets\TileMaps\basic_14.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TileMaps\basic_14.asset.meta
+        label: basic_14.asset.meta
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TileMaps\basic_14.asset.meta
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_14.asset.meta
+          projectPath: Assets\TileMaps\basic_14.asset.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TileMaps\basic_15.asset
+        label: basic_15.asset
+        level: 2
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TileMaps\basic_15.asset
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_15.asset
+          projectPath: Assets\TileMaps\basic_15.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TileMaps\basic_15.asset.meta
+        label: basic_15.asset.meta
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TileMaps\basic_15.asset.meta
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_15.asset.meta
+          projectPath: Assets\TileMaps\basic_15.asset.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TileMaps\basic_16.asset
+        label: basic_16.asset
+        level: 2
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TileMaps\basic_16.asset
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_16.asset
+          projectPath: Assets\TileMaps\basic_16.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TileMaps\basic_16.asset.meta
+        label: basic_16.asset.meta
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TileMaps\basic_16.asset.meta
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_16.asset.meta
+          projectPath: Assets\TileMaps\basic_16.asset.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TileMaps\basic_17.asset
+        label: basic_17.asset
+        level: 2
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TileMaps\basic_17.asset
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_17.asset
+          projectPath: Assets\TileMaps\basic_17.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TileMaps\basic_17.asset.meta
+        label: basic_17.asset.meta
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TileMaps\basic_17.asset.meta
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_17.asset.meta
+          projectPath: Assets\TileMaps\basic_17.asset.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TileMaps\basic_18.asset
+        label: basic_18.asset
+        level: 2
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TileMaps\basic_18.asset
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_18.asset
+          projectPath: Assets\TileMaps\basic_18.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TileMaps\basic_18.asset.meta
+        label: basic_18.asset.meta
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TileMaps\basic_18.asset.meta
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_18.asset.meta
+          projectPath: Assets\TileMaps\basic_18.asset.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TileMaps\basic_19.asset
+        label: basic_19.asset
+        level: 2
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TileMaps\basic_19.asset
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_19.asset
+          projectPath: Assets\TileMaps\basic_19.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TileMaps\basic_19.asset.meta
+        label: basic_19.asset.meta
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TileMaps\basic_19.asset.meta
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_19.asset.meta
+          projectPath: Assets\TileMaps\basic_19.asset.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TileMaps\basic_2.asset
+        label: basic_2.asset
+        level: 2
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TileMaps\basic_2.asset
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_2.asset
+          projectPath: Assets\TileMaps\basic_2.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TileMaps\basic_2.asset.meta
+        label: basic_2.asset.meta
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TileMaps\basic_2.asset.meta
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_2.asset.meta
+          projectPath: Assets\TileMaps\basic_2.asset.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TileMaps\basic_20.asset
+        label: basic_20.asset
+        level: 2
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TileMaps\basic_20.asset
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_20.asset
+          projectPath: Assets\TileMaps\basic_20.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TileMaps\basic_20.asset.meta
+        label: basic_20.asset.meta
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TileMaps\basic_20.asset.meta
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_20.asset.meta
+          projectPath: Assets\TileMaps\basic_20.asset.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TileMaps\basic_21.asset
+        label: basic_21.asset
+        level: 2
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TileMaps\basic_21.asset
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_21.asset
+          projectPath: Assets\TileMaps\basic_21.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TileMaps\basic_21.asset.meta
+        label: basic_21.asset.meta
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TileMaps\basic_21.asset.meta
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_21.asset.meta
+          projectPath: Assets\TileMaps\basic_21.asset.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TileMaps\basic_22.asset
+        label: basic_22.asset
+        level: 2
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TileMaps\basic_22.asset
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_22.asset
+          projectPath: Assets\TileMaps\basic_22.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TileMaps\basic_22.asset.meta
+        label: basic_22.asset.meta
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TileMaps\basic_22.asset.meta
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_22.asset.meta
+          projectPath: Assets\TileMaps\basic_22.asset.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TileMaps\basic_23.asset
+        label: basic_23.asset
+        level: 2
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TileMaps\basic_23.asset
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_23.asset
+          projectPath: Assets\TileMaps\basic_23.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TileMaps\basic_23.asset.meta
+        label: basic_23.asset.meta
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TileMaps\basic_23.asset.meta
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_23.asset.meta
+          projectPath: Assets\TileMaps\basic_23.asset.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TileMaps\basic_24.asset
+        label: basic_24.asset
+        level: 2
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TileMaps\basic_24.asset
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_24.asset
+          projectPath: Assets\TileMaps\basic_24.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TileMaps\basic_24.asset.meta
+        label: basic_24.asset.meta
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TileMaps\basic_24.asset.meta
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_24.asset.meta
+          projectPath: Assets\TileMaps\basic_24.asset.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TileMaps\basic_25.asset
+        label: basic_25.asset
+        level: 2
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TileMaps\basic_25.asset
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_25.asset
+          projectPath: Assets\TileMaps\basic_25.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TileMaps\basic_25.asset.meta
+        label: basic_25.asset.meta
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TileMaps\basic_25.asset.meta
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_25.asset.meta
+          projectPath: Assets\TileMaps\basic_25.asset.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TileMaps\basic_26.asset
+        label: basic_26.asset
+        level: 2
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TileMaps\basic_26.asset
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_26.asset
+          projectPath: Assets\TileMaps\basic_26.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TileMaps\basic_26.asset.meta
+        label: basic_26.asset.meta
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TileMaps\basic_26.asset.meta
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_26.asset.meta
+          projectPath: Assets\TileMaps\basic_26.asset.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TileMaps\basic_27.asset
+        label: basic_27.asset
+        level: 2
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TileMaps\basic_27.asset
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_27.asset
+          projectPath: Assets\TileMaps\basic_27.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TileMaps\basic_27.asset.meta
+        label: basic_27.asset.meta
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TileMaps\basic_27.asset.meta
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_27.asset.meta
+          projectPath: Assets\TileMaps\basic_27.asset.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TileMaps\basic_28.asset
+        label: basic_28.asset
+        level: 2
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TileMaps\basic_28.asset
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_28.asset
+          projectPath: Assets\TileMaps\basic_28.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TileMaps\basic_28.asset.meta
+        label: basic_28.asset.meta
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TileMaps\basic_28.asset.meta
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_28.asset.meta
+          projectPath: Assets\TileMaps\basic_28.asset.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TileMaps\basic_29.asset
+        label: basic_29.asset
+        level: 2
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TileMaps\basic_29.asset
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_29.asset
+          projectPath: Assets\TileMaps\basic_29.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TileMaps\basic_29.asset.meta
+        label: basic_29.asset.meta
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TileMaps\basic_29.asset.meta
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_29.asset.meta
+          projectPath: Assets\TileMaps\basic_29.asset.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TileMaps\basic_3.asset
+        label: basic_3.asset
+        level: 2
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TileMaps\basic_3.asset
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_3.asset
+          projectPath: Assets\TileMaps\basic_3.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TileMaps\basic_3.asset.meta
+        label: basic_3.asset.meta
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TileMaps\basic_3.asset.meta
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_3.asset.meta
+          projectPath: Assets\TileMaps\basic_3.asset.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TileMaps\basic_30.asset
+        label: basic_30.asset
+        level: 2
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TileMaps\basic_30.asset
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_30.asset
+          projectPath: Assets\TileMaps\basic_30.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TileMaps\basic_30.asset.meta
+        label: basic_30.asset.meta
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TileMaps\basic_30.asset.meta
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_30.asset.meta
+          projectPath: Assets\TileMaps\basic_30.asset.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TileMaps\basic_31.asset
+        label: basic_31.asset
+        level: 2
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TileMaps\basic_31.asset
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_31.asset
+          projectPath: Assets\TileMaps\basic_31.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TileMaps\basic_31.asset.meta
+        label: basic_31.asset.meta
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TileMaps\basic_31.asset.meta
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_31.asset.meta
+          projectPath: Assets\TileMaps\basic_31.asset.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TileMaps\basic_4.asset
+        label: basic_4.asset
+        level: 2
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TileMaps\basic_4.asset
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_4.asset
+          projectPath: Assets\TileMaps\basic_4.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TileMaps\basic_4.asset.meta
+        label: basic_4.asset.meta
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TileMaps\basic_4.asset.meta
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_4.asset.meta
+          projectPath: Assets\TileMaps\basic_4.asset.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TileMaps\basic_5.asset
+        label: basic_5.asset
+        level: 2
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TileMaps\basic_5.asset
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_5.asset
+          projectPath: Assets\TileMaps\basic_5.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TileMaps\basic_5.asset.meta
+        label: basic_5.asset.meta
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TileMaps\basic_5.asset.meta
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_5.asset.meta
+          projectPath: Assets\TileMaps\basic_5.asset.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TileMaps\basic_6.asset
+        label: basic_6.asset
+        level: 2
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TileMaps\basic_6.asset
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_6.asset
+          projectPath: Assets\TileMaps\basic_6.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TileMaps\basic_6.asset.meta
+        label: basic_6.asset.meta
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TileMaps\basic_6.asset.meta
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_6.asset.meta
+          projectPath: Assets\TileMaps\basic_6.asset.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TileMaps\basic_7.asset
+        label: basic_7.asset
+        level: 2
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TileMaps\basic_7.asset
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_7.asset
+          projectPath: Assets\TileMaps\basic_7.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TileMaps\basic_7.asset.meta
+        label: basic_7.asset.meta
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TileMaps\basic_7.asset.meta
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_7.asset.meta
+          projectPath: Assets\TileMaps\basic_7.asset.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TileMaps\basic_8.asset
+        label: basic_8.asset
+        level: 2
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TileMaps\basic_8.asset
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_8.asset
+          projectPath: Assets\TileMaps\basic_8.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TileMaps\basic_8.asset.meta
+        label: basic_8.asset.meta
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TileMaps\basic_8.asset.meta
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_8.asset.meta
+          projectPath: Assets\TileMaps\basic_8.asset.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TileMaps\basic_9.asset
+        label: basic_9.asset
+        level: 2
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TileMaps\basic_9.asset
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_9.asset
+          projectPath: Assets\TileMaps\basic_9.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\TileMaps\basic_9.asset.meta
+        label: basic_9.asset.meta
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TileMaps\basic_9.asset.meta
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\basic_9.asset.meta
+          projectPath: Assets\TileMaps\basic_9.asset.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: UserSettings
+        label: UserSettings
         level: 0
         isFolder: 1
         isContainer: 0
@@ -1741,9 +4145,27 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
-      - path: ProjectSettings\EditorBuildSettings.asset
-        label: EditorBuildSettings.asset
+      - path: UserSettings\Layouts
+        label: Layouts
         level: 1
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: UserSettings\Layouts\default-2021.dwlt
+        label: default-2021.dwlt
+        level: 2
         isFolder: 0
         isContainer: 0
         isCollapsed: 0
@@ -1753,29 +4175,11 @@ MonoBehaviour:
         checkState: 0
         isLocked: 0
         gitStatusEntry:
-          path: ProjectSettings\EditorBuildSettings.asset
-          fullPath: C:\Users\bruni\Documents\Vamp\ProjectSettings\EditorBuildSettings.asset
-          projectPath: ProjectSettings\EditorBuildSettings.asset
+          path: UserSettings\Layouts\default-2021.dwlt
+          fullPath: C:\Users\bruni\Documents\Vamp\UserSettings\Layouts\default-2021.dwlt
+          projectPath: UserSettings\Layouts\default-2021.dwlt
           originalPath: 
           indexStatus: 3
-          workTreeStatus: 0
-      - path: ProjectSettings\SceneTemplateSettings.json
-        label: SceneTemplateSettings.json
-        level: 1
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 0
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: ProjectSettings\SceneTemplateSettings.json
-          fullPath: C:\Users\bruni\Documents\Vamp\ProjectSettings\SceneTemplateSettings.json
-          projectPath: ProjectSettings\SceneTemplateSettings.json
-          originalPath: 
-          indexStatus: 4
           workTreeStatus: 0
       selectedNode:
         path: 
@@ -1849,100 +4253,16 @@ MonoBehaviour:
         gitFileStatus: 0
         lockedAt: 1 Jan 0001, 02:00
     lastCurrentRemoteChangedEvent:
-      updatedTimeString: 2023-03-01T12:14:33.213+02:00
+      updatedTimeString: 2023-03-01T20:36:40.633+02:00
       cacheType: 1
     lastLocksChangedEvent:
-      updatedTimeString: 2023-03-01T13:00:23.117+02:00
+      updatedTimeString: 2023-03-01T20:36:43.142+02:00
       cacheType: 7
     lastStatusEntriesChangedEvent:
-      updatedTimeString: 2023-03-01T13:00:23.006+02:00
+      updatedTimeString: 2023-03-01T20:36:56.028+02:00
       cacheType: 6
     lockedFiles: []
-    gitStatusEntries:
-    - path: .vsconfig
-      fullPath: C:\Users\bruni\Documents\Vamp\.vsconfig
-      projectPath: .vsconfig
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\Scenes\Main.unity
-      fullPath: C:\Users\bruni\Documents\Vamp\Assets\Scenes\Main.unity
-      projectPath: Assets\Scenes\Main.unity
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\Scenes\Main.unity.meta
-      fullPath: C:\Users\bruni\Documents\Vamp\Assets\Scenes\Main.unity.meta
-      projectPath: Assets\Scenes\Main.unity.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\Scenes\SampleScene.unity
-      fullPath: C:\Users\bruni\Documents\Vamp\Assets\Scenes\SampleScene.unity
-      projectPath: Assets\Scenes\SampleScene.unity
-      originalPath: 
-      indexStatus: 0
-      workTreeStatus: 5
-    - path: Assets\Scenes\SampleScene.unity.meta
-      fullPath: C:\Users\bruni\Documents\Vamp\Assets\Scenes\SampleScene.unity.meta
-      projectPath: Assets\Scenes\SampleScene.unity.meta
-      originalPath: 
-      indexStatus: 0
-      workTreeStatus: 5
-    - path: Assets\Scripts.meta
-      fullPath: C:\Users\bruni\Documents\Vamp\Assets\Scripts.meta
-      projectPath: Assets\Scripts.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\Scripts\Movement.cs
-      fullPath: C:\Users\bruni\Documents\Vamp\Assets\Scripts\Movement.cs
-      projectPath: Assets\Scripts\Movement.cs
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\Scripts\Movement.cs.meta
-      fullPath: C:\Users\bruni\Documents\Vamp\Assets\Scripts\Movement.cs.meta
-      projectPath: Assets\Scripts\Movement.cs.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\Textures.meta
-      fullPath: C:\Users\bruni\Documents\Vamp\Assets\Textures.meta
-      projectPath: Assets\Textures.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\TileMaps.meta
-      fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps.meta
-      projectPath: Assets\TileMaps.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\TileMaps\Test.prefab
-      fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\Test.prefab
-      projectPath: Assets\TileMaps\Test.prefab
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\TileMaps\Test.prefab.meta
-      fullPath: C:\Users\bruni\Documents\Vamp\Assets\TileMaps\Test.prefab.meta
-      projectPath: Assets\TileMaps\Test.prefab.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: ProjectSettings\EditorBuildSettings.asset
-      fullPath: C:\Users\bruni\Documents\Vamp\ProjectSettings\EditorBuildSettings.asset
-      projectPath: ProjectSettings\EditorBuildSettings.asset
-      originalPath: 
-      indexStatus: 0
-      workTreeStatus: 3
-    - path: ProjectSettings\SceneTemplateSettings.json
-      fullPath: C:\Users\bruni\Documents\Vamp\ProjectSettings\SceneTemplateSettings.json
-      projectPath: ProjectSettings\SceneTemplateSettings.json
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
+    gitStatusEntries: []
     currentUsername: 
     unlockFileMenuContent:
       m_Text: Release Lock
@@ -1958,7 +4278,7 @@ MonoBehaviour:
   currentRemoteUrl: https://github.com/22DP3BBiks/Vamp.git
   statusAhead: 0
   statusBehind: 0
-  hasItemsToCommit: 0
+  hasItemsToCommit: 1
   isTrackingRemoteBranch: 1
   currentBranchContent:
     m_Text: master
@@ -1969,13 +4289,13 @@ MonoBehaviour:
     m_Image: {fileID: 0}
     m_Tooltip: Url of the origin remote
   lastCurrentBranchAndRemoteChangedEvent:
-    updatedTimeString: 2023-03-01T13:22:16.656+02:00
+    updatedTimeString: 2023-03-01T20:37:34.456+02:00
     cacheType: 1
   lastTrackingStatusChangedEvent:
-    updatedTimeString: 2023-03-01T13:22:18.049+02:00
+    updatedTimeString: 2023-03-01T20:37:34.459+02:00
     cacheType: 5
   lastStatusEntriesChangedEvent:
-    updatedTimeString: 2023-03-01T13:23:06.366+02:00
+    updatedTimeString: 2023-03-01T20:38:37.200+02:00
     cacheType: 6
   pullButtonContent:
     m_Text: Pull
@@ -2039,22 +4359,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets
+    - Assets/Textures
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets
+  - Assets/Textures
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\bruni\Documents\Vamp
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 7a5f0000
-    m_LastClickedID: 24442
-    m_ExpandedIDs: 000000007a5f000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 24}
+    m_SelectedIDs: b25f0000
+    m_LastClickedID: 24498
+    m_ExpandedIDs: 00000000a85f000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -2082,7 +4402,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000007a5f0000
+    m_ExpandedIDs: 00000000a85f0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -2110,7 +4430,7 @@ MonoBehaviour:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c6230000
+    m_ExpandedInstanceIDs: c62300008a5f0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -2173,7 +4493,7 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 0
+  m_LastVerticalScrollValue: 58
   m_GlobalObjectId: 
   m_InspectorMode: 0
   m_LockTracker:
@@ -2210,9 +4530,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: deebffff
-      m_LastClickedID: -5154
-      m_ExpandedIDs: e4e0ffffdeebfffff0ecffff2cfbffff
+      m_SelectedIDs: f2f4ffff
+      m_LastClickedID: -2830
+      m_ExpandedIDs: f8f4ffff2afbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -2488,7 +4808,7 @@ MonoBehaviour:
       containerId: overlay-toolbar__top
       floating: 0
       collapsed: 0
-      displayed: 0
+      displayed: 1
       snapOffset: {x: 0, y: 0}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
@@ -2516,9 +4836,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 2.3725328, y: -0.55401784, z: 0.049109563}
+    m_Target: {x: -5.5935354, y: -0.77161354, z: -0.074275956}
     speed: 2
-    m_Value: {x: 2.3725328, y: -0.55401784, z: 0.049109563}
+    m_Value: {x: -5.5935354, y: -0.77161354, z: -0.074275956}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -2555,13 +4875,13 @@ MonoBehaviour:
       m_Size: {x: 1, y: 1}
     zGrid:
       m_Fade:
-        m_Target: 1
+        m_Target: 0
         speed: 2
-        m_Value: 1
+        m_Value: 0
       m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.4}
       m_Pivot: {x: 0, y: 0, z: 0}
       m_Size: {x: 1, y: 1}
-    m_ShowGrid: 1
+    m_ShowGrid: 0
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
@@ -2569,9 +4889,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 3.551325
+    m_Target: 8.812266
     speed: 2
-    m_Value: 3.551325
+    m_Value: 8.812266
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -2627,7 +4947,7 @@ MonoBehaviour:
   m_SerializedViewNames: []
   m_SerializedViewValues: []
   m_PlayModeViewName: GameView
-  m_ShowGizmos: 0
+  m_ShowGizmos: 1
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
   m_TargetSize: {x: 1102, y: 512}
@@ -2637,7 +4957,7 @@ MonoBehaviour:
   m_EnterPlayModeBehavior: 0
   m_UseMipMap: 0
   m_VSyncEnabled: 0
-  m_Gizmos: 0
+  m_Gizmos: 1
   m_Stats: 0
   m_SelectedSizes: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
   m_ZoomArea:
