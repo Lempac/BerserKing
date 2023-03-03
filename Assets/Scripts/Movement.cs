@@ -18,7 +18,8 @@ public class Movement : MonoBehaviour
         if(collision.name == "speed")
         {
             Speed += 10f;
-            Destroy(collision.gameObject);
+           /* collision.gameObject.SetActive(false);*/
+            collision.gameObject.GetComponent<speed>().respawn(gameObject);
         }
         
 
