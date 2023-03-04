@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 69
+  controlID: 118
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -224,7 +224,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 70
+  controlID: 119
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -249,7 +249,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 71
+  controlID: 120
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -310,9 +310,9 @@ MonoBehaviour:
   timeSinceLastRotation: -1
   currentBranchAndRemoteHasUpdate: 0
   currentTrackingStatusHasUpdate: 0
-  currentStatusEntriesHasUpdate: 1
-  repositoryProgressHasUpdate: 1
-  appManagerProgressHasUpdate: 1
+  currentStatusEntriesHasUpdate: 0
+  repositoryProgressHasUpdate: 0
+  appManagerProgressHasUpdate: 0
   changeTab: 3
   activeTab: 3
   initProjectView:
@@ -485,8 +485,8 @@ MonoBehaviour:
       tracking: '[None]'
   changesView:
     currentBranchHasUpdate: 0
-    currentStatusEntriesHasUpdate: 1
-    currentLocksHasUpdate: 1
+    currentStatusEntriesHasUpdate: 0
+    currentLocksHasUpdate: 0
     commitBody: 
     commitMessage: 
     currentBranch: master
@@ -582,24 +582,6 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
-      - path: UserSettings\EditorUserSettings.asset
-        label: EditorUserSettings.asset
-        level: 1
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: UserSettings\EditorUserSettings.asset
-          fullPath: C:\Users\bruni\Documents\Vamp\UserSettings\EditorUserSettings.asset
-          projectPath: UserSettings\EditorUserSettings.asset
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 3
       - path: UserSettings\Layouts
         label: Layouts
         level: 1
@@ -656,32 +638,161 @@ MonoBehaviour:
           indexStatus: 0
           workTreeStatus: 0
     gitStatusEntries:
-    - path: UserSettings\EditorUserSettings.asset
-      fullPath: C:\Users\bruni\Documents\Vamp\UserSettings\EditorUserSettings.asset
-      projectPath: UserSettings\EditorUserSettings.asset
-      originalPath: 
-      indexStatus: 0
-      workTreeStatus: 3
     - path: UserSettings\Layouts\default-2021.dwlt
       fullPath: C:\Users\bruni\Documents\Vamp\UserSettings\Layouts\default-2021.dwlt
       projectPath: UserSettings\Layouts\default-2021.dwlt
       originalPath: 
       indexStatus: 0
       workTreeStatus: 3
-    changedFilesText: 2 changed files
+    changedFilesText: 1 changed file
     lastCurrentBranchChangedEvent:
-      updatedTimeString: 2023-03-03T14:13:02.404+02:00
+      updatedTimeString: 2023-03-04T16:34:33.321+02:00
       cacheType: 1
     lastStatusEntriesChangedEvent:
-      updatedTimeString: 2023-03-03T14:33:52.625+02:00
+      updatedTimeString: 2023-03-04T16:34:35.564+02:00
       cacheType: 6
     lastLocksChangedEvent:
-      updatedTimeString: 0001-01-01T00:00:00.000+00:00
+      updatedTimeString: 2023-03-04T16:34:35.309+02:00
       cacheType: 7
   historyView:
     currentLogHasUpdate: 0
     currentTrackingStatusHasUpdate: 0
     logEntries:
+    - commitID: d8fa49057bfab4c79da49bbd9914ee8253713e47
+      mergeA: 
+      mergeB: 
+      authorName: 22DP3BBiks
+      authorEmail: 13DPBBiksis@rvt.lv
+      commitEmail: 13DPBBiksis@rvt.lv
+      commitName: 22DP3BBiks
+      summary: basic main menu with button
+      description: 
+      timeString: 2023-03-03T22:41:14.000+02:00
+      commitTimeString: 2023-03-03T22:41:14.000+02:00
+      changes:
+      - path: Assets\Scenes\Game.unity
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\Scenes\Game.unity
+        projectPath: Assets\Scenes\Game.unity
+        originalPath: Assets\Scenes\Main.unity
+        indexStatus: 6
+        workTreeStatus: 0
+      - path: Assets\Scenes\Game.unity.meta
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\Scenes\Game.unity.meta
+        projectPath: Assets\Scenes\Game.unity.meta
+        originalPath: Assets\Scenes\Main.unity.meta
+        indexStatus: 6
+        workTreeStatus: 0
+      - path: Assets\Scenes\MainMenu.unity
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\Scenes\MainMenu.unity
+        projectPath: Assets\Scenes\MainMenu.unity
+        originalPath: 
+        indexStatus: 5
+        workTreeStatus: 0
+      - path: Assets\Scenes\Menu.unity
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\Scenes\Menu.unity
+        projectPath: Assets\Scenes\Menu.unity
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scenes\Menu.unity.meta
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\Scenes\Menu.unity.meta
+        projectPath: Assets\Scenes\Menu.unity.meta
+        originalPath: Assets\Scenes\MainMenu.unity.meta
+        indexStatus: 6
+        workTreeStatus: 0
+      - path: Assets\Scripts\MainMenu.cs
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\Scripts\MainMenu.cs
+        projectPath: Assets\Scripts\MainMenu.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\TextMesh Pro\Examples & Extras\Resources\Fonts & Materials\Roboto-Bold
+          SDF.asset
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TextMesh Pro\Examples & Extras\Resources\Fonts
+          & Materials\Roboto-Bold SDF.asset
+        projectPath: Assets\TextMesh Pro\Examples & Extras\Resources\Fonts & Materials\Roboto-Bold
+          SDF.asset
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: ProjectSettings\EditorBuildSettings.asset
+        fullPath: C:\Users\bruni\Documents\Vamp\ProjectSettings\EditorBuildSettings.asset
+        projectPath: ProjectSettings\EditorBuildSettings.asset
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+    - commitID: e3b5e97fa79df4cd9fed1d2bab9b52a62cc187bd
+      mergeA: 
+      mergeB: 
+      authorName: 22DP3APaza
+      authorEmail: 13DPAPazars@rvt.lv
+      commitEmail: 13DPAPazars@rvt.lv
+      commitName: 22DP3APaza
+      summary: almost complete speed.cs
+      description: 
+      timeString: 2023-03-03T22:13:13.000+02:00
+      commitTimeString: 2023-03-03T22:13:13.000+02:00
+      changes:
+      - path: Assets\Scripts\Movement.cs
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\Scripts\Movement.cs
+        projectPath: Assets\Scripts\Movement.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\speed.cs
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\Scripts\speed.cs
+        projectPath: Assets\Scripts\speed.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: UserSettings\EditorUserSettings.asset
+        fullPath: C:\Users\bruni\Documents\Vamp\UserSettings\EditorUserSettings.asset
+        projectPath: UserSettings\EditorUserSettings.asset
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+    - commitID: fe590f215934066fe695d12fd26482a29e965a16
+      mergeA: 
+      mergeB: 
+      authorName: 22DP3BBiks
+      authorEmail: 13DPBBiksis@rvt.lv
+      commitEmail: 13DPBBiksis@rvt.lv
+      commitName: 22DP3BBiks
+      summary: Something with ui
+      description: 
+      timeString: 2023-03-03T20:45:13.000+02:00
+      commitTimeString: 2023-03-03T20:45:13.000+02:00
+      changes:
+      - path: Assets\Scenes\MainMenu.unity
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\Scenes\MainMenu.unity
+        projectPath: Assets\Scenes\MainMenu.unity
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\MainMenu.cs
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\Scripts\MainMenu.cs
+        projectPath: Assets\Scripts\MainMenu.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\speed.cs
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\Scripts\speed.cs
+        projectPath: Assets\Scripts\speed.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: UserSettings\EditorUserSettings.asset
+        fullPath: C:\Users\bruni\Documents\Vamp\UserSettings\EditorUserSettings.asset
+        projectPath: UserSettings\EditorUserSettings.asset
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: UserSettings\Layouts\default-2021.dwlt
+        fullPath: C:\Users\bruni\Documents\Vamp\UserSettings\Layouts\default-2021.dwlt
+        projectPath: UserSettings\Layouts\default-2021.dwlt
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
     - commitID: 3e6fcddf50996fb76038237b310dda7915800931
       mergeA: 
       mergeB: 
@@ -6309,14 +6420,149 @@ MonoBehaviour:
         workTreeStatus: 0
     statusAhead: 0
     lastLogChangedEvent:
-      updatedTimeString: 2023-03-02T18:04:32.647+02:00
+      updatedTimeString: 2023-03-03T22:41:23.917+02:00
       cacheType: 3
     lastTrackingStatusChangedEvent:
-      updatedTimeString: 2023-03-02T18:04:32.905+02:00
+      updatedTimeString: 2023-03-03T22:41:23.913+02:00
       cacheType: 5
     historyControl:
       scroll: {x: 0, y: 0}
       entries:
+      - commitID: d8fa49057bfab4c79da49bbd9914ee8253713e47
+        mergeA: 
+        mergeB: 
+        authorName: 22DP3BBiks
+        authorEmail: 13DPBBiksis@rvt.lv
+        commitEmail: 13DPBBiksis@rvt.lv
+        commitName: 22DP3BBiks
+        summary: basic main menu with button
+        description: 
+        timeString: 2023-03-03T22:41:14.000+02:00
+        commitTimeString: 2023-03-03T22:41:14.000+02:00
+        changes:
+        - path: Assets\Scenes\Game.unity
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\Scenes\Game.unity
+          projectPath: Assets\Scenes\Game.unity
+          originalPath: Assets\Scenes\Main.unity
+          indexStatus: 6
+          workTreeStatus: 0
+        - path: Assets\Scenes\Game.unity.meta
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\Scenes\Game.unity.meta
+          projectPath: Assets\Scenes\Game.unity.meta
+          originalPath: Assets\Scenes\Main.unity.meta
+          indexStatus: 6
+          workTreeStatus: 0
+        - path: Assets\Scenes\MainMenu.unity
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\Scenes\MainMenu.unity
+          projectPath: Assets\Scenes\MainMenu.unity
+          originalPath: 
+          indexStatus: 5
+          workTreeStatus: 0
+        - path: Assets\Scenes\Menu.unity
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\Scenes\Menu.unity
+          projectPath: Assets\Scenes\Menu.unity
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scenes\Menu.unity.meta
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\Scenes\Menu.unity.meta
+          projectPath: Assets\Scenes\Menu.unity.meta
+          originalPath: Assets\Scenes\MainMenu.unity.meta
+          indexStatus: 6
+          workTreeStatus: 0
+        - path: Assets\Scripts\MainMenu.cs
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\Scripts\MainMenu.cs
+          projectPath: Assets\Scripts\MainMenu.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\TextMesh Pro\Examples & Extras\Resources\Fonts & Materials\Roboto-Bold
+            SDF.asset
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TextMesh Pro\Examples &
+            Extras\Resources\Fonts & Materials\Roboto-Bold SDF.asset
+          projectPath: Assets\TextMesh Pro\Examples & Extras\Resources\Fonts & Materials\Roboto-Bold
+            SDF.asset
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: ProjectSettings\EditorBuildSettings.asset
+          fullPath: C:\Users\bruni\Documents\Vamp\ProjectSettings\EditorBuildSettings.asset
+          projectPath: ProjectSettings\EditorBuildSettings.asset
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - commitID: e3b5e97fa79df4cd9fed1d2bab9b52a62cc187bd
+        mergeA: 
+        mergeB: 
+        authorName: 22DP3APaza
+        authorEmail: 13DPAPazars@rvt.lv
+        commitEmail: 13DPAPazars@rvt.lv
+        commitName: 22DP3APaza
+        summary: almost complete speed.cs
+        description: 
+        timeString: 2023-03-03T22:13:13.000+02:00
+        commitTimeString: 2023-03-03T22:13:13.000+02:00
+        changes:
+        - path: Assets\Scripts\Movement.cs
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\Scripts\Movement.cs
+          projectPath: Assets\Scripts\Movement.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\speed.cs
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\Scripts\speed.cs
+          projectPath: Assets\Scripts\speed.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: UserSettings\EditorUserSettings.asset
+          fullPath: C:\Users\bruni\Documents\Vamp\UserSettings\EditorUserSettings.asset
+          projectPath: UserSettings\EditorUserSettings.asset
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - commitID: fe590f215934066fe695d12fd26482a29e965a16
+        mergeA: 
+        mergeB: 
+        authorName: 22DP3BBiks
+        authorEmail: 13DPBBiksis@rvt.lv
+        commitEmail: 13DPBBiksis@rvt.lv
+        commitName: 22DP3BBiks
+        summary: Something with ui
+        description: 
+        timeString: 2023-03-03T20:45:13.000+02:00
+        commitTimeString: 2023-03-03T20:45:13.000+02:00
+        changes:
+        - path: Assets\Scenes\MainMenu.unity
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\Scenes\MainMenu.unity
+          projectPath: Assets\Scenes\MainMenu.unity
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\MainMenu.cs
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\Scripts\MainMenu.cs
+          projectPath: Assets\Scripts\MainMenu.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\speed.cs
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\Scripts\speed.cs
+          projectPath: Assets\Scripts\speed.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: UserSettings\EditorUserSettings.asset
+          fullPath: C:\Users\bruni\Documents\Vamp\UserSettings\EditorUserSettings.asset
+          projectPath: UserSettings\EditorUserSettings.asset
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: UserSettings\Layouts\default-2021.dwlt
+          fullPath: C:\Users\bruni\Documents\Vamp\UserSettings\Layouts\default-2021.dwlt
+          projectPath: UserSettings\Layouts\default-2021.dwlt
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
       - commitID: 3e6fcddf50996fb76038237b310dda7915800931
         mergeA: 
         mergeB: 
@@ -12052,51 +12298,66 @@ MonoBehaviour:
       statusAhead: 0
       selectedIndex: 0
     selectedEntry:
-      commitID: 3e6fcddf50996fb76038237b310dda7915800931
+      commitID: d8fa49057bfab4c79da49bbd9914ee8253713e47
       mergeA: 
       mergeB: 
-      authorName: 22DP3APaza
-      authorEmail: 13DPAPazars@rvt.lv
-      commitEmail: 13DPAPazars@rvt.lv
-      commitName: 22DP3APaza
-      summary: doesnt work needs fixing
+      authorName: 22DP3BBiks
+      authorEmail: 13DPBBiksis@rvt.lv
+      commitEmail: 13DPBBiksis@rvt.lv
+      commitName: 22DP3BBiks
+      summary: basic main menu with button
       description: 
-      timeString: 2023-03-02T17:58:10.000+02:00
-      commitTimeString: 2023-03-02T17:58:10.000+02:00
+      timeString: 2023-03-03T22:41:14.000+02:00
+      commitTimeString: 2023-03-03T22:41:14.000+02:00
       changes:
-      - path: Assets\Scenes\Main.unity
-        fullPath: C:\Users\bruni\Documents\Vamp\Assets\Scenes\Main.unity
-        projectPath: Assets\Scenes\Main.unity
-        originalPath: 
-        indexStatus: 3
+      - path: Assets\Scenes\Game.unity
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\Scenes\Game.unity
+        projectPath: Assets\Scenes\Game.unity
+        originalPath: Assets\Scenes\Main.unity
+        indexStatus: 6
         workTreeStatus: 0
-      - path: Assets\Scripts\Movement.cs
-        fullPath: C:\Users\bruni\Documents\Vamp\Assets\Scripts\Movement.cs
-        projectPath: Assets\Scripts\Movement.cs
-        originalPath: 
-        indexStatus: 3
+      - path: Assets\Scenes\Game.unity.meta
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\Scenes\Game.unity.meta
+        projectPath: Assets\Scenes\Game.unity.meta
+        originalPath: Assets\Scenes\Main.unity.meta
+        indexStatus: 6
         workTreeStatus: 0
-      - path: Assets\Scripts\speed.cs
-        fullPath: C:\Users\bruni\Documents\Vamp\Assets\Scripts\speed.cs
-        projectPath: Assets\Scripts\speed.cs
+      - path: Assets\Scenes\MainMenu.unity
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\Scenes\MainMenu.unity
+        projectPath: Assets\Scenes\MainMenu.unity
+        originalPath: 
+        indexStatus: 5
+        workTreeStatus: 0
+      - path: Assets\Scenes\Menu.unity
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\Scenes\Menu.unity
+        projectPath: Assets\Scenes\Menu.unity
         originalPath: 
         indexStatus: 4
         workTreeStatus: 0
-      - path: Assets\Scripts\speed.cs.meta
-        fullPath: C:\Users\bruni\Documents\Vamp\Assets\Scripts\speed.cs.meta
-        projectPath: Assets\Scripts\speed.cs.meta
-        originalPath: 
-        indexStatus: 4
+      - path: Assets\Scenes\Menu.unity.meta
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\Scenes\Menu.unity.meta
+        projectPath: Assets\Scenes\Menu.unity.meta
+        originalPath: Assets\Scenes\MainMenu.unity.meta
+        indexStatus: 6
         workTreeStatus: 0
-      - path: Assets\Textures\Tiles\MasterSimple.png.meta
-        fullPath: C:\Users\bruni\Documents\Vamp\Assets\Textures\Tiles\MasterSimple.png.meta
-        projectPath: Assets\Textures\Tiles\MasterSimple.png.meta
+      - path: Assets\Scripts\MainMenu.cs
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\Scripts\MainMenu.cs
+        projectPath: Assets\Scripts\MainMenu.cs
         originalPath: 
         indexStatus: 3
         workTreeStatus: 0
-      - path: UserSettings\EditorUserSettings.asset
-        fullPath: C:\Users\bruni\Documents\Vamp\UserSettings\EditorUserSettings.asset
-        projectPath: UserSettings\EditorUserSettings.asset
+      - path: Assets\TextMesh Pro\Examples & Extras\Resources\Fonts & Materials\Roboto-Bold
+          SDF.asset
+        fullPath: C:\Users\bruni\Documents\Vamp\Assets\TextMesh Pro\Examples & Extras\Resources\Fonts
+          & Materials\Roboto-Bold SDF.asset
+        projectPath: Assets\TextMesh Pro\Examples & Extras\Resources\Fonts & Materials\Roboto-Bold
+          SDF.asset
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: ProjectSettings\EditorBuildSettings.asset
+        fullPath: C:\Users\bruni\Documents\Vamp\ProjectSettings\EditorBuildSettings.asset
+        projectPath: ProjectSettings\EditorBuildSettings.asset
         originalPath: 
         indexStatus: 3
         workTreeStatus: 0
@@ -12109,9 +12370,11 @@ MonoBehaviour:
         - Assets
         - Assets\Scenes
         - Assets\Scripts
-        - Assets\Textures
-        - Assets\Textures\Tiles
-        - UserSettings
+        - Assets\TextMesh Pro
+        - Assets\TextMesh Pro\Examples & Extras
+        - Assets\TextMesh Pro\Examples & Extras\Resources
+        - Assets\TextMesh Pro\Examples & Extras\Resources\Fonts & Materials
+        - ProjectSettings
         values:
         - path: Assets
           label: Assets
@@ -12167,8 +12430,8 @@ MonoBehaviour:
             originalPath: 
             indexStatus: 0
             workTreeStatus: 0
-        - path: Assets\Textures
-          label: Textures
+        - path: Assets\TextMesh Pro
+          label: TextMesh Pro
           level: 1
           isFolder: 1
           isContainer: 0
@@ -12185,8 +12448,8 @@ MonoBehaviour:
             originalPath: 
             indexStatus: 0
             workTreeStatus: 0
-        - path: Assets\Textures\Tiles
-          label: Tiles
+        - path: Assets\TextMesh Pro\Examples & Extras
+          label: Examples & Extras
           level: 2
           isFolder: 1
           isContainer: 0
@@ -12203,8 +12466,44 @@ MonoBehaviour:
             originalPath: 
             indexStatus: 0
             workTreeStatus: 0
-        - path: UserSettings
-          label: UserSettings
+        - path: Assets\TextMesh Pro\Examples & Extras\Resources
+          label: Resources
+          level: 3
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 0
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\TextMesh Pro\Examples & Extras\Resources\Fonts & Materials
+          label: Fonts & Materials
+          level: 4
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 0
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: ProjectSettings
+          label: ProjectSettings
           level: 0
           isFolder: 1
           isContainer: 0
@@ -12285,8 +12584,44 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
-      - path: Assets\Scenes\Main.unity
-        label: Main.unity
+      - path: Assets\Scenes\Game.unity
+        label: Game.unity
+        level: 2
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Scenes\Game.unity
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\Scenes\Game.unity
+          projectPath: Assets\Scenes\Game.unity
+          originalPath: Assets\Scenes\Main.unity
+          indexStatus: 6
+          workTreeStatus: 0
+      - path: Assets\Scenes\Game.unity.meta
+        label: Game.unity.meta
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Scenes\Game.unity.meta
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\Scenes\Game.unity.meta
+          projectPath: Assets\Scenes\Game.unity.meta
+          originalPath: Assets\Scenes\Main.unity.meta
+          indexStatus: 6
+          workTreeStatus: 0
+      - path: Assets\Scenes\MainMenu.unity
+        label: MainMenu.unity
         level: 2
         isFolder: 0
         isContainer: 0
@@ -12297,11 +12632,47 @@ MonoBehaviour:
         checkState: 0
         isLocked: 0
         gitStatusEntry:
-          path: Assets\Scenes\Main.unity
-          fullPath: C:\Users\bruni\Documents\Vamp\Assets\Scenes\Main.unity
-          projectPath: Assets\Scenes\Main.unity
+          path: Assets\Scenes\MainMenu.unity
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\Scenes\MainMenu.unity
+          projectPath: Assets\Scenes\MainMenu.unity
           originalPath: 
-          indexStatus: 3
+          indexStatus: 5
+          workTreeStatus: 0
+      - path: Assets\Scenes\Menu.unity
+        label: Menu.unity
+        level: 2
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Scenes\Menu.unity
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\Scenes\Menu.unity
+          projectPath: Assets\Scenes\Menu.unity
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\Scenes\Menu.unity.meta
+        label: Menu.unity.meta
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Scenes\Menu.unity.meta
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\Scenes\Menu.unity.meta
+          projectPath: Assets\Scenes\Menu.unity.meta
+          originalPath: Assets\Scenes\MainMenu.unity.meta
+          indexStatus: 6
           workTreeStatus: 0
       - path: Assets\Scripts
         label: Scripts
@@ -12321,8 +12692,8 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
-      - path: Assets\Scripts\Movement.cs
-        label: Movement.cs
+      - path: Assets\Scripts\MainMenu.cs
+        label: MainMenu.cs
         level: 2
         isFolder: 0
         isContainer: 0
@@ -12333,50 +12704,14 @@ MonoBehaviour:
         checkState: 0
         isLocked: 0
         gitStatusEntry:
-          path: Assets\Scripts\Movement.cs
-          fullPath: C:\Users\bruni\Documents\Vamp\Assets\Scripts\Movement.cs
-          projectPath: Assets\Scripts\Movement.cs
+          path: Assets\Scripts\MainMenu.cs
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\Scripts\MainMenu.cs
+          projectPath: Assets\Scripts\MainMenu.cs
           originalPath: 
           indexStatus: 3
           workTreeStatus: 0
-      - path: Assets\Scripts\speed.cs
-        label: speed.cs
-        level: 2
-        isFolder: 0
-        isContainer: 1
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 0
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Scripts\speed.cs
-          fullPath: C:\Users\bruni\Documents\Vamp\Assets\Scripts\speed.cs
-          projectPath: Assets\Scripts\speed.cs
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-      - path: Assets\Scripts\speed.cs.meta
-        label: speed.cs.meta
-        level: 3
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 0
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Scripts\speed.cs.meta
-          fullPath: C:\Users\bruni\Documents\Vamp\Assets\Scripts\speed.cs.meta
-          projectPath: Assets\Scripts\speed.cs.meta
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-      - path: Assets\Textures
-        label: Textures
+      - path: Assets\TextMesh Pro
+        label: TextMesh Pro
         level: 1
         isFolder: 1
         isContainer: 0
@@ -12393,8 +12728,8 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
-      - path: Assets\Textures\Tiles
-        label: Tiles
+      - path: Assets\TextMesh Pro\Examples & Extras
+        label: Examples & Extras
         level: 2
         isFolder: 1
         isContainer: 0
@@ -12411,9 +12746,46 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
-      - path: Assets\Textures\Tiles\MasterSimple.png.meta
-        label: MasterSimple.png.meta
+      - path: Assets\TextMesh Pro\Examples & Extras\Resources
+        label: Resources
         level: 3
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\TextMesh Pro\Examples & Extras\Resources\Fonts & Materials
+        label: Fonts & Materials
+        level: 4
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\TextMesh Pro\Examples & Extras\Resources\Fonts & Materials\Roboto-Bold
+          SDF.asset
+        label: Roboto-Bold SDF.asset
+        level: 5
         isFolder: 0
         isContainer: 0
         isCollapsed: 0
@@ -12423,14 +12795,17 @@ MonoBehaviour:
         checkState: 0
         isLocked: 0
         gitStatusEntry:
-          path: Assets\Textures\Tiles\MasterSimple.png.meta
-          fullPath: C:\Users\bruni\Documents\Vamp\Assets\Textures\Tiles\MasterSimple.png.meta
-          projectPath: Assets\Textures\Tiles\MasterSimple.png.meta
+          path: Assets\TextMesh Pro\Examples & Extras\Resources\Fonts & Materials\Roboto-Bold
+            SDF.asset
+          fullPath: C:\Users\bruni\Documents\Vamp\Assets\TextMesh Pro\Examples &
+            Extras\Resources\Fonts & Materials\Roboto-Bold SDF.asset
+          projectPath: Assets\TextMesh Pro\Examples & Extras\Resources\Fonts & Materials\Roboto-Bold
+            SDF.asset
           originalPath: 
           indexStatus: 3
           workTreeStatus: 0
-      - path: UserSettings
-        label: UserSettings
+      - path: ProjectSettings
+        label: ProjectSettings
         level: 0
         isFolder: 1
         isContainer: 0
@@ -12447,8 +12822,8 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
-      - path: UserSettings\EditorUserSettings.asset
-        label: EditorUserSettings.asset
+      - path: ProjectSettings\EditorBuildSettings.asset
+        label: EditorBuildSettings.asset
         level: 1
         isFolder: 0
         isContainer: 0
@@ -12459,9 +12834,9 @@ MonoBehaviour:
         checkState: 0
         isLocked: 0
         gitStatusEntry:
-          path: UserSettings\EditorUserSettings.asset
-          fullPath: C:\Users\bruni\Documents\Vamp\UserSettings\EditorUserSettings.asset
-          projectPath: UserSettings\EditorUserSettings.asset
+          path: ProjectSettings\EditorBuildSettings.asset
+          fullPath: C:\Users\bruni\Documents\Vamp\ProjectSettings\EditorBuildSettings.asset
+          projectPath: ProjectSettings\EditorBuildSettings.asset
           originalPath: 
           indexStatus: 3
           workTreeStatus: 0
@@ -12573,13 +12948,13 @@ MonoBehaviour:
     m_Image: {fileID: 0}
     m_Tooltip: Url of the origin remote
   lastCurrentBranchAndRemoteChangedEvent:
-    updatedTimeString: 2023-03-03T14:13:02.404+02:00
+    updatedTimeString: 2023-03-04T16:34:33.321+02:00
     cacheType: 1
   lastTrackingStatusChangedEvent:
-    updatedTimeString: 2023-03-03T14:14:29.607+02:00
+    updatedTimeString: 2023-03-04T16:34:35.568+02:00
     cacheType: 5
   lastStatusEntriesChangedEvent:
-    updatedTimeString: 2023-03-03T14:21:25.857+02:00
+    updatedTimeString: 2023-03-04T16:34:35.564+02:00
     cacheType: 6
   pullButtonContent:
     m_Text: Pull
@@ -12643,22 +13018,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Textures/UI
+    - Assets/Scripts
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Textures/UI
+  - Assets/Scripts
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\bruni\Documents\Vamp
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 79}
-    m_SelectedIDs: b6610000
-    m_LastClickedID: 25014
-    m_ExpandedIDs: 00000000486100004a6100004c61000000ca9a3bffffff7f
+    m_SelectedIDs: 34610000
+    m_LastClickedID: 24884
+    m_ExpandedIDs: 00000000286100002a6100002c61000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -12686,7 +13061,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000486100004a6100004c610000
+    m_ExpandedIDs: 00000000286100002a6100002c610000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -12777,7 +13152,7 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 256
+  m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_InspectorMode: 0
   m_LockTracker:
@@ -12814,9 +13189,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: d8e6ffff66ecffff0eedffff46eeffff0cf1ffff2afbffff2662000076790000527b00005e7b0000
+      m_SelectedIDs: 70e7ffff
+      m_LastClickedID: -6288
+      m_ExpandedIDs: 70e7ffff2afbfffffc5f00006e600000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -13120,9 +13495,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 623.895, y: 253.92502, z: 0.95704204}
+    m_Target: {x: 472.881, y: 277.8484, z: 599.15125}
     speed: 2
-    m_Value: {x: 623.895, y: 253.92502, z: 0.95704204}
+    m_Value: {x: 472.881, y: 277.8484, z: 599.15125}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -13173,9 +13548,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 277.7456
+    m_Target: 312.72165
     speed: 2
-    m_Value: 277.7456
+    m_Value: 312.72165
   m_Ortho:
     m_Target: 1
     speed: 2
