@@ -19,7 +19,7 @@ public class Movement : MonoBehaviour
         if(collision.name == "speed")
         {
             Speed += 10f;
-            AudioSource.PlayClipAtPoint(speedtakesound,transform.position);
+            AudioSource.PlayClipAtPoint(speedtakesound,transform.position, .5f);
            /* collision.gameObject.SetActive(false);*/
             collision.gameObject.GetComponent<speed>().respawn(gameObject);
         }
