@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
+    public AudioClip speedtakesound;
     public float Speed = 1f;
     // Update is called once per frame
     void FixedUpdate()
@@ -18,6 +19,7 @@ public class Movement : MonoBehaviour
         if(collision.name == "speed")
         {
             Speed += 10f;
+            AudioSource.PlayClipAtPoint(speedtakesound,transform.position);
            /* collision.gameObject.SetActive(false);*/
             collision.gameObject.GetComponent<speed>().respawn(gameObject);
         }
