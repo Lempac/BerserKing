@@ -44,7 +44,6 @@ public class GenerateTileMap : MonoBehaviour
         }
     }
 
-
     void Start()
     {
         Level = new GameObject("GenLevel", typeof(Tilemap), typeof(TilemapRenderer));
