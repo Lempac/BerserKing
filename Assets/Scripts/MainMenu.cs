@@ -21,4 +21,8 @@ public class MainMenu : MonoBehaviour
     {
         main.SetFloat("MainVolume", val);
     }
+    public void OnDamageNumbers(bool val)
+    {
+        
+    }
 }
