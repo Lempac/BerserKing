@@ -56,7 +56,7 @@ public class GenerateTileMap : MonoBehaviour
             {
                 if (data.TryGetValue(new Tuple<int, int>(i, j), out byte ChunkData))
                 {
-                    //LoadChunk(i, j, ChunkData);
+                    LoadChunk(i, j, ChunkData);
                 } 
                 else
                 {
