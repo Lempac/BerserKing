@@ -12,7 +12,7 @@ public class damage : MonoBehaviour
         if (gameObject.name == "Player")
         {
             hp -= damageperframe;
-            await Task.Delay(2000);
+            await Task.Delay(500);
             cooldown = false;
         }
     }
