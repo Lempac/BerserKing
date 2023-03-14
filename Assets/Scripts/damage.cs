@@ -1,21 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnityEngine;
 
 public class damage : MonoBehaviour
 {
     public int damageperframe = 5;
     public int hp = 100;
+    async void DoDamage()
+    {
+        if (gameObject.name == "Player")
+        {
+            hp -= damageperframe;
+            await Task.Delay(2000);
+            cooldown = false;
+        }
+    }
+    bool cooldown = false;
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (gameObject.name=="Player")
+        if (!cooldown)
         {
-            if (Time.frameCount % 6 == 0)
-            {
-                hp -= damageperframe;
-            }
-            
-            
+            cooldown = true;
+            DoDamage();
         }
     }
 }
