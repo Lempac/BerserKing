@@ -15,6 +15,7 @@ public class Particle : MonoBehaviour
         
         if(other.TryGetComponent(out Enemy en))
         {
+            Debug.Log("Hit");
             en.TakeDamage(damage);
         }
     }
