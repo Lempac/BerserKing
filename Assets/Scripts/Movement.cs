@@ -5,6 +5,7 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     public float Speed = 1f;
+    public Animator animator;
     // Update is called once per frame
     void FixedUpdate()
     {
