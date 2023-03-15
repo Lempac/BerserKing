@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Particle : MonoBehaviour
 {
-    public float damage = 50f;
+    public float damage = 10f;
     public ParticleSystem particleSystem;
 
     List<ParticleCollisionEvent> colEvents = new List<ParticleCollisionEvent>();
@@ -15,7 +15,10 @@ public class Particle : MonoBehaviour
         
         if(other.TryGetComponent(out Enemy en))
         {
+            Debug.Log("Hit");
             en.TakeDamage(damage);
         }
     }
+    
+
 }

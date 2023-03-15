@@ -1,17 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
 using System.Threading.Tasks;
 using UnityEngine;
 
-public class damage : MonoBehaviour
+public class Damage : MonoBehaviour
 {
     public int damageperframe = 5;
     public int hp = 100;
     async void DoDamage(Collision2D enemy)
     {
-
-        if (gameObject.name == "Player" && enemy.gameObject.name == "enemy")
-
+        if (gameObject.name == "Player" && enemy.gameObject.name == "Enemy")
         {
             hp -= damageperframe;
             await Task.Delay(500);
