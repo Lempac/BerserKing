@@ -6,12 +6,14 @@ public class Particle : MonoBehaviour
 {
     public float damage = 10f;
     public ParticleSystem particleSystem;
+    int events;
 
     List<ParticleCollisionEvent> colEvents = new List<ParticleCollisionEvent>();
+
     private void OnParticleCollision(GameObject other)
     {
-        int events = particleSystem.GetCollisionEvents(other, colEvents);
-        
+        events = particleSystem.GetCollisionEvents(other, colEvents);
+
         
         if(other.TryGetComponent(out Enemy en))
         {
