@@ -1,26 +1,17 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Runtime.InteropServices.WindowsRuntime;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 
-public class speed : MonoBehaviour
+public class Speed : MonoBehaviour
 {
-    /*private void OnDisable()
+    [SerializeField] private GameObject player;
+    [SerializeField] private AudioClip speedtakesound;
+    [SerializeField] private float speedModifyer;
+    private void OnTriggerEnter2D(Collider2D collider)
     {
-        if (!gameObject.activeSelf)
-        {
-            transform.position = new Vector3(0, 2);
-            gameObject.SetActive(true);
-        }
-
-    }*/
-    
-    public void respawn(GameObject player)
-    {
-
+        //if (collider.gameObject != player) return;
+        MenuHandeler.Instance.gameObject.SetActive(false);
+        collider.GetComponent<Movement>().Speed += speedModifyer;
+        AudioSource.PlayClipAtPoint(speedtakesound, transform.position, .5f);
         transform.position = new Vector3(Random.Range(1, 6), Random.Range(1, 6));
-
     }
 }

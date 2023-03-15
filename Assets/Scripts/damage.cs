@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using UnityEngine;
 
-public class damage : MonoBehaviour
+public class Damage : MonoBehaviour
 {
     public int damageperframe = 5;
     public int hp = 100;
