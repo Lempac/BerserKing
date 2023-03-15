@@ -1,10 +1,9 @@
 fileFormatVersion: 2
-guid: d3a93a9e14b8cd445855f5333c5f963b
+guid: 85ec9e75f67f9f34cbfe91c6a61b614e
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences:
-  - speedtakesound: {instanceID: 0}
+  defaultReferences: []
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
