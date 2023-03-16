@@ -821,6 +821,42 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4906222346478757206, guid: 5eeba31af0a90c640950b6dd06b30090, type: 3}
+      propertyPath: stopAction
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4906222346478757206, guid: 5eeba31af0a90c640950b6dd06b30090, type: 3}
+      propertyPath: lengthInSec
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4906222346478757206, guid: 5eeba31af0a90c640950b6dd06b30090, type: 3}
+      propertyPath: ringBufferMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4906222346478757206, guid: 5eeba31af0a90c640950b6dd06b30090, type: 3}
+      propertyPath: emitterVelocityMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4906222346478757206, guid: 5eeba31af0a90c640950b6dd06b30090, type: 3}
+      propertyPath: EmissionModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4906222346478757206, guid: 5eeba31af0a90c640950b6dd06b30090, type: 3}
+      propertyPath: VelocityModule.enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4906222346478757206, guid: 5eeba31af0a90c640950b6dd06b30090, type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4906222346478757206, guid: 5eeba31af0a90c640950b6dd06b30090, type: 3}
+      propertyPath: InitialModule.startSpeed.scalar
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4906222346478757206, guid: 5eeba31af0a90c640950b6dd06b30090, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4906222346544423765, guid: 5eeba31af0a90c640950b6dd06b30090, type: 3}
       propertyPath: m_Name
       value: Player
