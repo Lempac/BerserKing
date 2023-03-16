@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ca2f18549b8101447a5c0596eb53fea8, type: 3}
-  m_Name: Speed
+  m_Name: Damage
   m_EditorClassIdentifier: 
-  ItemName: Speed
-  ItemDescription: Give speed to the player
+  ItemName: Damage
+  ItemDescription: Increase player damage.
   ItemType: 0
-  ItemSprite: {fileID: -1897586488, guid: 9f4c321692abd7445af0d6e1aedaadd8, type: 3}
-  PlayOnPickUp: {fileID: 8300000, guid: 97e21417cfaf6c6448ce57764e224b43, type: 3}
+  ItemSprite: {fileID: -1925368547, guid: 9f4c321692abd7445af0d6e1aedaadd8, type: 3}
+  PlayOnPickUp: {fileID: 8300000, guid: 027a4688ea99f99448e8ce306844aa36, type: 3}
   SpawnRate: 0.15

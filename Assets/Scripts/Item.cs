@@ -15,5 +15,6 @@ public class Item : ScriptableObject
     }
     public EItemType ItemType;
     public Sprite ItemSprite;
-    public AudioClip PlayOnPickUp; 
+    public AudioClip PlayOnPickUp;
+    public float SpawnRate;
 }
