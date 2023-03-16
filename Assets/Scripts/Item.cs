@@ -1,8 +1,5 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 [CreateAssetMenu(menuName = "New Item")]
 public class Item : ScriptableObject
@@ -18,4 +15,5 @@ public class Item : ScriptableObject
     }
     public EItemType ItemType;
     public Sprite ItemSprite;
+    public AudioClip PlayOnPickUp; 
 }

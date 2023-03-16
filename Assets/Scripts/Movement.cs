@@ -7,6 +7,7 @@ public class Movement : MonoBehaviour
 {
     public float Speed = 1f;
     public Animator animator;
+    
     void FixedUpdate()
     {
         GetComponent<Rigidbody2D>().AddForce(new Vector2(Input.GetAxis("Horizontal") * Speed * Time.deltaTime, Input.GetAxis("Vertical") * Speed * Time.deltaTime),ForceMode2D.Impulse);
