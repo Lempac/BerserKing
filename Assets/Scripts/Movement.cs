@@ -6,6 +6,8 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     public float Speed = 1f;
+    public Animator animator;
+    
     public float HorizontalMove;
     public float VerticalMove;
     private bool IsFacingRight = true;
@@ -34,7 +36,6 @@ public class Movement : MonoBehaviour
             StartCoroutine(Dash());
         }
     }
-
     void FixedUpdate()
     {
         HorizontalMove = Input.GetAxis("Horizontal");
