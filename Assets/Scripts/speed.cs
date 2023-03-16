@@ -1,6 +1,5 @@
 using UnityEngine;
 
-
 public class Speed : MonoBehaviour
 {
     [SerializeField] private GameObject player;
