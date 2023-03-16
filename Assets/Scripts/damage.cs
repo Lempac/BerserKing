@@ -4,16 +4,25 @@ using UnityEngine;
 public class Damage : MonoBehaviour
 {
     public int damageperframe = 5;
-    public int hp = 100;
+    public int playerHealth;
+    public int maxHealth = 100;
+    
+    public Health health;
+    private void Start()
+    {
+        playerHealth = maxHealth;
+        health.SetMaxHealth(maxHealth);
+    }
     async void DoDamage(Collision2D enemy)
     {
         
-        if (gameObject.name == "Player" && enemy.gameObject.name == "Enemy")
+        if (gameObject.name == "Player" && enemy.gameObject.name == "Worm")
         {
                 
-            hp -= damageperframe;
+            playerHealth -= damageperframe;
             await Task.Delay(500);
             cooldown = false;
+            health.SetHealth(playerHealth);
         }
     }
     
