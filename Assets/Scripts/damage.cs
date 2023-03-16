@@ -16,7 +16,7 @@ public class Damage : MonoBehaviour
     async void DoDamage(Collision2D enemy)
     {
         
-        if (gameObject.name == "Player" && enemy.gameObject.name == "Enemy")
+        if (gameObject.name == "Player" && enemy.gameObject.name == "Worm")
         {
                 
             playerHealth -= damageperframe;
