@@ -15,7 +15,7 @@ public class EntityManager : MonoBehaviour
 
     private IEnumerator Spawer()
     {
-        if(OnEntitySpawn != null) OnEntitySpawn();
+        OnEntitySpawn?.Invoke();
         yield return null;
     }
 

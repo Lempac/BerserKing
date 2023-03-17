@@ -16,9 +16,11 @@ public class GenerateTileMap : MonoBehaviour
 
     public static GenerateTileMap Instance { get; private set; }
 
+    public delegate void OnNewLoadChunkEvent(int x, int y, byte data);
     public delegate void LoadChunkEvent(int x, int y, byte data);
     public delegate void UnloadChunkEvent(int x, int y);
 
+    public static event LoadChunkEvent OnNewLoadChunk;
     public static event LoadChunkEvent OnLoadChunk;
     public static event UnloadChunkEvent OnUnloadChunk;
     public void Awake()
@@ -27,23 +29,23 @@ public class GenerateTileMap : MonoBehaviour
         else Instance = this;
     }
 
-    void LoadChunk(int PositionX, int PositionY, byte ChunkData)
+    private bool LoadChunk(int PositionX, int PositionY, byte ChunkData)
     {
         
         int StartX = PositionX * ChunkX;
         int StartY = PositionY * ChunkY;
-        if (LevelMap.HasTile(new Vector3Int(StartX, StartY))) return;
+        if (LevelMap.HasTile(new Vector3Int(StartX, StartY))) return false;
         
         LevelMap.SetTilesBlock(new BoundsInt(new Vector3Int(StartX, StartY), baseTiles[ChunkData].cellBounds.size), baseTiles[ChunkData].GetTilesBlock(baseTiles[ChunkData].cellBounds));
-        if (OnLoadChunk != null) OnLoadChunk(PositionX, PositionY, ChunkData);
         Debug.Log($"Chunk {PositionX} : {PositionY} loaded!");
+        return true;
     }
-    void UnloadChunk(int PositionX, int PositionY)
+    private bool UnloadChunk(int PositionX, int PositionY)
     {
         
         int StartX = PositionX * ChunkX;
         int StartY = PositionY * ChunkY;
-        if (!LevelMap.HasTile(new Vector3Int(StartX, StartY))) return;
+        if (!LevelMap.HasTile(new Vector3Int(StartX, StartY))) return false;
         for (int x = StartX; x < StartX + ChunkX; x++)
         {
             for (int y = StartY; y < StartY + ChunkY; y++)
@@ -51,8 +53,8 @@ public class GenerateTileMap : MonoBehaviour
                 LevelMap.SetTile(new Vector3Int(x, y), null);
             }
         }
-        if (OnUnloadChunk != null) OnUnloadChunk(PositionX, PositionY);
         Debug.Log($"Chunk {PositionX} : {PositionY} unloaded!");
+        return true;
     }
 
     void Start()
@@ -71,14 +73,18 @@ public class GenerateTileMap : MonoBehaviour
             {
                 if (data.TryGetValue((i, j), out byte ChunkData))
                 {
-                    LoadChunk(i, j, ChunkData);
+                    if (LoadChunk(i, j, ChunkData)) OnLoadChunk?.Invoke(i, j, ChunkData);
                 } 
                 else
                 {
 
                     byte f = Convert.ToByte(Mathf.PerlinNoise(i * delta, j * delta) * (baseTiles.Length - 1));
                     data.Add((i, j), f);
-                    LoadChunk(i, j, f);
+                    if (LoadChunk(i, j, f))
+                    {
+                        OnNewLoadChunk?.Invoke(i, j, f);
+                        OnLoadChunk?.Invoke(i, j, f);
+                    }
                 }
             }
         }
@@ -87,8 +93,7 @@ public class GenerateTileMap : MonoBehaviour
             for (int j = -(LoadRange + UnloadAfterChunk) + y; j <= LoadRange + UnloadAfterChunk + y; j++)
             {
                 if (i >= -LoadRange + x && i <= LoadRange + x && j >= -LoadRange + y && j <= LoadRange + y) continue;
-                //Debug.Log(i + " " + j);
-                UnloadChunk(i, j);
+                if (UnloadChunk(i, j)) OnUnloadChunk?.Invoke(i, j);
             }
         }
     }
