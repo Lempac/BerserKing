@@ -1,7 +1,8 @@
 using System;
 using UnityEngine;
+using UnityEditor;
 
-[CreateAssetMenu(menuName = "New Item")]
+[CreateAssetMenu(menuName = "Object/Item", fileName ="New Item")]
 public class Item : ScriptableObject
 {
     public string ItemName;
@@ -15,5 +16,15 @@ public class Item : ScriptableObject
     }
     public EItemType ItemType;
     public Sprite ItemSprite;
-    public AudioClip PlayOnPickUp; 
+    public AudioClip PlayOnPickUp;
+    public float SpawnRate;
 }
+
+//[CustomEditor(typeof(Item))]
+//public class ItemEditor : Editor
+//{
+//    public override void OnInspectorGUI()
+//    {
+//        base.OnInspectorGUI();
+//    }
+//}
