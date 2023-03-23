@@ -20,8 +20,27 @@ public class MenuHandeler : MonoBehaviour
         if (Instance != null) Debug.LogError("Only one Menu Handeler!");
         else Instance = this;
     }
+
+    private void Pause()
+    {
+        Time.timeScale = 0f;
+    }
+    private void Resume()
+    {
+        Time.timeScale = 1f;
+    }
+
+    public void Start()
+    {
+        OnShowItem += (Item _) => { Pause(); };
+        OnShowChest += () => { Pause(); };
+        OnTakeItem += (Item _) => { Resume(); };
+        OnTakeChest += () => { Resume(); };
+    }
+
     public void ShowItemMenu(Item item)
     {
+        
         OnShowItem?.Invoke(item);
         GameObject menu = Instantiate(ItemMenu);
         menu.transform.SetParent(transform, false);
@@ -36,6 +55,7 @@ public class MenuHandeler : MonoBehaviour
     }
     public void ShowChestMenu()
     {
+        Time.timeScale = 0f;
         OnShowChest?.Invoke();
         GameObject menu = Instantiate(ChestMenu);
         menu.transform.SetParent(transform, false);

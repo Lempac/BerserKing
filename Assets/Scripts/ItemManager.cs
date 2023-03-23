@@ -39,6 +39,7 @@ public class ItemManager : MonoBehaviour
         {
             Item data = item.GetComponent<ItemData>().itemdata;
             item.GetComponent<AudioSource>().PlayOneShot(data.PlayOnPickUp);
+            Destroy(item);
             MenuHandeler.Instance.ShowItemMenu(data);
         };
     }
@@ -64,7 +65,6 @@ public class ItemManager : MonoBehaviour
     {
         private void OnTriggerEnter2D(Collider2D collision)
         {
-            Debug.Log("Triggred!");
             Instance.OnItemPickUp(gameObject, collision);
         }
     }
