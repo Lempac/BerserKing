@@ -21,6 +21,15 @@ public class Particle : MonoBehaviour
             en.TakeDamage(damage);
         }
     }
-    
+    public void FlipYRotation()
+    {
+        if (particleSystem != null)
+        {
+            Vector3 rotation = particleSystem.transform.localRotation.eulerAngles;
+            rotation.y *= -1f;
+            particleSystem.transform.localRotation = Quaternion.Euler(rotation);
+        }
+    }
+
 
 }
