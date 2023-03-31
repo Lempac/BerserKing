@@ -31,6 +31,7 @@ public class Damage : MonoBehaviour
     {
         if (!cooldown)
         {
+
             cooldown = true;
             DoDamage(collision);
         }
