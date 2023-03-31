@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4906222346357787823}
   - component: {fileID: 4906222346357787821}
   - component: {fileID: 4906222346357787729}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -110,7 +110,7 @@ GameObject:
   - component: {fileID: 4906222346478757206}
   - component: {fileID: 4906222346478757205}
   - component: {fileID: 1411392742}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3884,7 +3884,7 @@ ParticleSystem:
     radiusScale: 1
     collidesWith:
       serializedVersion: 2
-      m_Bits: 4294967295
+      m_Bits: 183
     maxCollisionShapes: 256
     quality: 0
     voxelSize: 0.5
@@ -4880,7 +4880,7 @@ ParticleSystemRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_RenderMode: 0
   m_MeshDistribution: 0
   m_SortMode: 0
@@ -4941,7 +4941,7 @@ GameObject:
   - component: {fileID: 1317418144}
   - component: {fileID: 1317418138}
   - component: {fileID: 1573379571}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}

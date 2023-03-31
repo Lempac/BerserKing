@@ -521,6 +521,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ChestMenu: {fileID: 1782261681454315351, guid: 20eb912cf4929fc4a95da77a79a3d6b9, type: 3}
   ItemMenu: {fileID: 5428582153145869075, guid: aa314c6d1178c764fab139c7e9d674ed, type: 3}
+  ItemSlot: {fileID: 0}
 --- !u!1 &1145237555
 GameObject:
   m_ObjectHideFlags: 0
@@ -807,7 +808,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -747
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -994,6 +995,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db6ca73a39d7e724d8d09952feac6d59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EntityLimit: 100
 --- !u!114 &1473155407
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1007,10 +1009,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Items:
-  - {fileID: 11400000, guid: 0cba9823c14578e409b0718a4e8a8e0a, type: 2}
-  - {fileID: 11400000, guid: 7c51a077c75d03449bb319bce48caedd, type: 2}
-  - {fileID: 11400000, guid: cf9cfd8de93c01c48a9c777a037ca624, type: 2}
-  - {fileID: 11400000, guid: 8e651eef3609c6147b4dc11c20115d56, type: 2}
+  - {fileID: 11400000, guid: f141c94d97b46794b98eda1a39edd073, type: 2}
+  - {fileID: 0}
 --- !u!1 &1529418745
 GameObject:
   m_ObjectHideFlags: 0
@@ -1198,33 +1198,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4906222346357787820, guid: 5eeba31af0a90c640950b6dd06b30090, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 4906222346478757204, guid: 5eeba31af0a90c640950b6dd06b30090, type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 4906222346478757205, guid: 5eeba31af0a90c640950b6dd06b30090, type: 3}
-      propertyPath: m_SortingOrder
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4906222346478757205, guid: 5eeba31af0a90c640950b6dd06b30090, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 2f530e43dc13d1a42ae3b7d2380deba8, type: 2}
-    - target: {fileID: 4906222346478757206, guid: 5eeba31af0a90c640950b6dd06b30090, type: 3}
-      propertyPath: CollisionModule.collidesWith.m_Bits
-      value: 183
-      objectReference: {fileID: 0}
     - target: {fileID: 4906222346544423765, guid: 5eeba31af0a90c640950b6dd06b30090, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 4906222346544423765, guid: 5eeba31af0a90c640950b6dd06b30090, type: 3}
-      propertyPath: m_Layer
-      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4906222346544423768, guid: 5eeba31af0a90c640950b6dd06b30090, type: 3}
       propertyPath: m_RootOrder

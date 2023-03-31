@@ -9,12 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca2f18549b8101447a5c0596eb53fea8, type: 3}
+  m_Script: {fileID: 11500000, guid: 9960ea78815dfba458ff4344945ad11b, type: 3}
   m_Name: Damage
   m_EditorClassIdentifier: 
-  ItemName: Damage
-  ItemDescription: Increase player damage.
-  ItemType: 0
-  ItemSprite: {fileID: -1925368547, guid: 9f4c321692abd7445af0d6e1aedaadd8, type: 3}
-  PlayOnPickUp: {fileID: 8300000, guid: 027a4688ea99f99448e8ce306844aa36, type: 3}
-  SpawnRate: 0.15
+  ID: 0
+  ItemName: 
+  ItemDescription: 
+  ItemSprite: {fileID: 0}
+  PlayOnPickUp: {fileID: 0}
+  SpawnRate: 0
+  Levels: []
