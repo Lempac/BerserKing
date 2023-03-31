@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Chest
   m_EditorClassIdentifier: 
   ID: 0
-  ItemName: 
-  ItemDescription: 
+  ItemName: Chest
+  ItemDescription: This is a chest
   ItemSprite: {fileID: 0}
   PlayOnPickUp: {fileID: 0}
   SpawnRate: 0
