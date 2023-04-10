@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f0b7163d38be61a40996807a04e22775
+guid: 3d8246d6138e1f941ae8014a617b4aa6
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 64
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -117,13 +117,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: idle_0
+      name: crow_death2_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 100
-        height: 100
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,20 +131,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f018aac3c4785a749a9638b6d3b4b5ec
-      internalID: 1983020767
+      spriteID: f3144cd97d315fa48be2144202851858
+      internalID: -868612964
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: idle_1
+      name: crow_death2_1
       rect:
         serializedVersion: 2
-        x: 100
+        x: 64
         y: 0
-        width: 100
-        height: 100
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,20 +152,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a0baeb79a28be1f44938ef3a514f320e
-      internalID: -1724433287
+      spriteID: c3d11daf3a9ef1741ae22850ed708c0d
+      internalID: 1040756484
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: idle_2
+      name: crow_death2_2
       rect:
         serializedVersion: 2
-        x: 200
+        x: 128
         y: 0
-        width: 100
-        height: 100
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -173,20 +173,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 281622b596b6697439a5ebd8145369ad
-      internalID: -901714635
+      spriteID: 3e6828261282f424fb0248ddfa7e4a86
+      internalID: -340860366
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: idle_3
+      name: crow_death2_3
       rect:
         serializedVersion: 2
-        x: 300
+        x: 192
         y: 0
-        width: 100
-        height: 100
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -194,8 +194,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f6f80ae2687d2b54f99caa9d9436314c
-      internalID: -317281745
+      spriteID: c5154458d8d321649b3335e8d799a56a
+      internalID: 1877952249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crow_death2_4
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdf86892e8ef0dc4883cb256cb4a0c68
+      internalID: 829383617
       vertices: []
       indices: 
       edges: []
@@ -211,10 +232,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      idle_0: 1983020767
-      idle_1: -1724433287
-      idle_2: -901714635
-      idle_3: -317281745
+      crow_death2_0: -868612964
+      crow_death2_1: 1040756484
+      crow_death2_2: -340860366
+      crow_death2_3: 1877952249
+      crow_death2_4: 829383617
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
