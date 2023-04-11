@@ -28,7 +28,6 @@ public class EntityManager : MonoBehaviour
         GameObject entity = new(data.name,new System.Type[] { typeof(Animator), });
     }
 
-
     private IEnumerator Spawer()
     {
         while (true)

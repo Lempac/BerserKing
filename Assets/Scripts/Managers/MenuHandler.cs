@@ -108,6 +108,6 @@ public class MenuHandler : MonoBehaviour
         slotdata.ItemIcon.sprite = attribute.ItemSprite;
         slotdata.ItemLevel.text = "0";
         slot.transform.SetParent(transform, false);
-        slot.transform.position = new Vector3((Screen.width/2)/ItemManager.Instance.Items.Length, transform.position.x / (Screen.width / 4)*3);
+        slot.transform.position = new Vector3((Screen.width/2)/Item.Items.Count, transform.position.x / (Screen.width / 4)*3);
     }
 }

@@ -6,7 +6,6 @@ using UnityEngine.Tilemaps;
 public class GenerateTileMap : MonoBehaviour
 {
     [SerializeField] private Transform player;
-    public Grid[] baseTiles;
     readonly private Dictionary<(int, int), byte> data = new();
     public int ChunkX = 16, ChunkY = 16, LoadRange = 1, UnloadAfterChunk = 1;
     [SerializeField] float delta = 0.01f;
@@ -55,7 +54,7 @@ public class GenerateTileMap : MonoBehaviour
     {
         int StartX = PositionX * ChunkX;
         int StartY = PositionY * ChunkY;
-        foreach (Transform tile in baseTiles[ChunkData].transform)
+        foreach (Transform tile in TileMapData.TileMaps[ChunkData].transform)
         {
             Tilemap currTileMap = transform.Find(tile.name)?.GetComponent<Tilemap>();
             if (currTileMap == null) currTileMap = NewLayer(tile.gameObject);
@@ -89,7 +88,7 @@ public class GenerateTileMap : MonoBehaviour
 
     void Start()
     {
-        foreach (var grid in baseTiles)
+        foreach (var grid in TileMapData.TileMaps)
         {
             foreach (Transform tile in grid.transform)
             {
@@ -111,7 +110,7 @@ public class GenerateTileMap : MonoBehaviour
                 else
                 {
 
-                    byte f = Convert.ToByte(Mathf.PerlinNoise(i * delta, j * delta) * (baseTiles.Length - 1));
+                    byte f = Convert.ToByte(Mathf.PerlinNoise(i * delta, j * delta) * (TileMapData.TileMaps.Count - 1));
                     data.Add((i, j), f);
                     if (LoadChunk(i, j, f))
                     {

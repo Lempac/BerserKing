@@ -14,7 +14,6 @@ public class ItemManager : MonoBehaviour
     public event ItemDespawned OnItemDespawned;
     public delegate void ItemPickUp(GameObject item, Collider2D howPickUp);
     public event ItemPickUp OnItemPickUp;
-    public Item[] Items;
 
     private delegate void DeleteItemInChunk(int x, int y);
     private DeleteItemInChunk OnDeleteItemInChunk;
@@ -29,6 +28,7 @@ public class ItemManager : MonoBehaviour
     }
     private void Start()
     {
+        Debug.Log(Entity.Entities.Count);
         ChunkX = GenerateTileMap.Instance.ChunkX;
         ChunkY = GenerateTileMap.Instance.ChunkY;
         GenerateTileMap.OnNewLoadChunk += OnNewLoadChunk;
@@ -50,8 +50,9 @@ public class ItemManager : MonoBehaviour
                     return;
                 }
                 Dictionary<int, int> otherLevels = ((ItemLevel)otherLevel).ItemLevels;
-                if (!otherLevels.TryGetValue(data.ID, out int levelIndex)) { 
-                    otherLevels[data.ID] = 0;
+                int index = Item.Items.IndexOf(data);
+                if (!otherLevels.TryGetValue(index, out int levelIndex)) { 
+                    otherLevels[index] = 0;
                     levelIndex = 0;
                 }
                 Attribute.Level levelData = levels[levelIndex];
@@ -61,9 +62,9 @@ public class ItemManager : MonoBehaviour
                     FieldInfo property = component.GetType().GetField(stat.StatName);
                     property.SetValue(component, stat.OverWrite ? Convert.ChangeType(stat.Value, property.GetValue(component).GetType()) : stat.Value + property.GetValue(component));
                 }
-                if(levelIndex + 1 < levels.Length) otherLevels[data.ID] = 1+levelIndex;
+                if(levelIndex + 1 < levels.Length) otherLevels[index] = 1+levelIndex;
                 MenuHandler.OnTakeItem -= OnTakeItem;
-                SpawnedItems[(Mathf.FloorToInt(item.transform.position.x / ChunkX), Mathf.FloorToInt(item.transform.position.y / ChunkX))].Remove((Mathf.FloorToInt(item.transform.position.x), Mathf.FloorToInt(item.transform.position.y), (byte)itemdata.ID));
+                SpawnedItems[(Mathf.FloorToInt(item.transform.position.x / ChunkX), Mathf.FloorToInt(item.transform.position.y / ChunkX))].Remove((Mathf.FloorToInt(item.transform.position.x), Mathf.FloorToInt(item.transform.position.y), (byte)index));
                 Destroy(item);
             }
             MenuHandler.OnTakeItem += OnTakeItem;
@@ -131,11 +132,11 @@ public class ItemManager : MonoBehaviour
     }
     private void OnNewLoadChunk(int x, int y, byte data)
     {
-        TileMapData tileMapData = GenerateTileMap.Instance.baseTiles[data].GetComponent<TileMapData>();
+        TileMapData tileMapData = TileMapData.TileMaps[data].GetComponent<TileMapData>();
         ItemsData = new List<(int, int, byte)>();
-        foreach (var item in Items)
+        foreach (var item in Item.Items)
         {
-            if (tileMapData.MaxItemAmount >= ItemsData.Count) break;
+            if (tileMapData.MaxItemAmount <= ItemsData.Count) break;
             if (Random.Range(0f, 1f) > item.SpawnRate) continue;
             int PositionX = x * ChunkX + Random.Range(0, ChunkX);
             int PositionY = y * ChunkY + Random.Range(0, ChunkY);
@@ -143,7 +144,7 @@ public class ItemManager : MonoBehaviour
             //Debug.Log($"With Position x:{x} y:{y} PositionX:{PositionX} PositionY:{PositionY}");
             OnNewItemSpawned?.Invoke(item);
             //OnItemSpawned?.Invoke(itemObject);
-            ItemsData.Add((PositionX, PositionY, (byte)(item.ID)));
+            ItemsData.Add((PositionX, PositionY, (byte)Item.Items.IndexOf(item)));
         }
         SpawnedItems[(x, y)] = ItemsData;
     }
@@ -154,7 +155,7 @@ public class ItemManager : MonoBehaviour
         {
             foreach (var item in ItemsData)
             {
-                GameObject itemObject = Spawn(item.Item1, item.Item2, Items[item.Item3]);
+                GameObject itemObject = Spawn(item.Item1, item.Item2, Item.Items[item.Item3]);
                 OnItemSpawned?.Invoke(itemObject);
             }
         }
