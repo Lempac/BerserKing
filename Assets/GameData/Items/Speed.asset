@@ -12,10 +12,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9960ea78815dfba458ff4344945ad11b, type: 3}
   m_Name: Speed
   m_EditorClassIdentifier: 
-  ID: 0
+  ID: 3
   ItemName: Speed
   ItemDescription: Gives Speed.
-  ItemSprite: {fileID: -1897586488, guid: 9f4c321692abd7445af0d6e1aedaadd8, type: 3}
+  ItemSprite: {fileID: -1419977934, guid: e967950ebe7577847ba7d90c54ec6fee, type: 3}
   PlayOnPickUp: {fileID: 8300000, guid: ba7a31e1eaa688744b8dff288cff4338, type: 3}
   SpawnRate: 0.1
-  Levels: []
+  Levels:
+  - Desicription: Test
+    States:
+    - ComponentName: Movement
+      StatName: Speed
+      Value: 120
+      OverWrite: 1
+  - Desicription: Test
+    States:
+    - ComponentName: Movement
+      StatName: Speed
+      Value: 200
+      OverWrite: 1

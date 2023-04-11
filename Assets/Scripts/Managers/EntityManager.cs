@@ -6,12 +6,15 @@ public class EntityManager : MonoBehaviour
 {
     public delegate void EntitySpawned();
     public event EntitySpawned OnEntitySpawned;
-
     public delegate void EntityDespawned();
     public event EntityDespawned OnEntityDespawned;
+    public delegate void WaveStart();
+    public event WaveStart OnWaveStart;
+    public delegate void WaveEnd();
+    public event WaveEnd OnWaveEnd;
 
     public int EntityLimit = 200;
-    private List<GameObject> Entitys;
+    readonly private List<GameObject> Entitys;
     public static EntityManager Instance { get; private set; }
     public void Awake()
     {
@@ -22,7 +25,7 @@ public class EntityManager : MonoBehaviour
     private void Spawn(Entity data)
     {
 
-        GameObject entity = new GameObject(data.name,new System.Type[] { typeof(Animator), });
+        GameObject entity = new(data.name,new System.Type[] { typeof(Animator), });
     }
 
 
