@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Reflection;
 using UnityEngine;
+using UnityEngine.UIElements;
 using Random = UnityEngine.Random;
 
 public class ItemManager : MonoBehaviour
@@ -115,7 +116,6 @@ public class ItemManager : MonoBehaviour
         if(item.GetType().IsSubclassOf(typeof(Attribute)) || item.GetType() == typeof(Attribute)) newItem.AddComponent<ItemData>().itemdata = (Attribute)item;
         void delete (int PositionX, int PositionY)
         {
-            Debug.Log($"This should be only one! : {item.ItemName}");
             if(PositionX == x && PositionY == y) {
                 //Debug.Log($"Item Despawned x:{x} y:{y} x/chunkX:{Mathf.FloorToInt(x / ChunkX)} y/ChunkY:{Mathf.FloorToInt(y / ChunkX)} PositionX:{PositionX} PositionY:{PositionY} {Mathf.FloorToInt(x / ChunkX) == PositionX && Mathf.FloorToInt(y / ChunkX) == PositionY}");
                 //if (Mathf.FloorToInt(x / ChunkX) == PositionX && Mathf.FloorToInt(y / ChunkX) == PositionY) {
@@ -133,12 +133,18 @@ public class ItemManager : MonoBehaviour
     {
         TileMapData tileMapData = GenerateTileMap.Instance.baseTiles[data].GetComponent<TileMapData>();
         ItemsData = new List<(int, int, byte)>();
+        
         foreach (var item in Items)
         {
-            if (tileMapData.MaxItemAmount >= ItemsData.Count) break;
+            if (tileMapData.MaxItemAmount <= ItemsData.Count) break;
             if (Random.Range(0f, 1f) > item.SpawnRate) continue;
-            int PositionX = x * ChunkX + Random.Range(0, ChunkX);
-            int PositionY = y * ChunkY + Random.Range(0, ChunkY);
+            int PositionX;
+            int PositionY;
+            do
+            {
+                PositionX = x * ChunkX + Random.Range(0, ChunkX);
+                PositionY = y * ChunkY + Random.Range(0, ChunkY);
+            } while (Physics.OverlapSphere(new Vector3Int(PositionX, PositionY), 1f).Length > 0);
             //GameObject itemObject = Spawn(PositionX, PositionY, item);
             //Debug.Log($"With Position x:{x} y:{y} PositionX:{PositionX} PositionY:{PositionY}");
             OnNewItemSpawned?.Invoke(item);
@@ -155,6 +161,7 @@ public class ItemManager : MonoBehaviour
             foreach (var item in ItemsData)
             {
                 GameObject itemObject = Spawn(item.Item1, item.Item2, Items[item.Item3]);
+                Debug.Log($"Item spawned: {itemObject.name} at pos x:{itemObject.transform.position.x} and pos y: {itemObject.transform.position.y}");
                 OnItemSpawned?.Invoke(itemObject);
             }
         }

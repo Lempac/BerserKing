@@ -57,8 +57,7 @@ public class GenerateTileMap : MonoBehaviour
         int StartY = PositionY * ChunkY;
         foreach (Transform tile in baseTiles[ChunkData].transform)
         {
-            Tilemap currTileMap = transform.Find(tile.name)?.GetComponent<Tilemap>();
-            if (currTileMap == null) currTileMap = NewLayer(tile.gameObject);
+            Tilemap currTileMap = (transform.Find(tile.name)?.GetComponent<Tilemap>()) ?? NewLayer(tile.gameObject);
             if (HasTiles(currTileMap, new BoundsInt(new Vector3Int(StartX, StartY), new Vector3Int(ChunkX, ChunkY, 1)))) return false;
             Tilemap currTileMapData = tile.GetComponent<Tilemap>();
             currTileMap.SetTilesBlock(new BoundsInt(new Vector3Int(currTileMapData.cellBounds.position.x+StartX, currTileMapData.cellBounds.position.y + StartY), currTileMapData.cellBounds.size), currTileMapData.GetTilesBlock(currTileMapData.cellBounds));
@@ -74,7 +73,7 @@ public class GenerateTileMap : MonoBehaviour
         foreach (Transform tilemapObject in transform)
         {
             Tilemap currTileMap = tilemapObject.GetComponent<Tilemap>();
-            if (!HasTiles(currTileMap, new BoundsInt(new Vector3Int(StartX, StartY), new Vector3Int(ChunkX, ChunkY)))) return false;
+            if (!HasTiles(currTileMap, new BoundsInt(new Vector3Int(StartX, StartY), new Vector3Int(ChunkX, ChunkY, 1)))) return false;
             for (int x = StartX; x < StartX + ChunkX; x++)
             {
                 for (int y = StartY; y < StartY + ChunkY; y++)
