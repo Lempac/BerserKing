@@ -1,29 +1,31 @@
 using System;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "Object/Items/Attribute", fileName = "New Attribute")]
 public class Attribute : Item
 {
     [Serializable]
-    public class IState
+    public struct IState
     {
-        public string ComponentName;
-        public string StatName;
-        public string Value;
-        public bool OverWrite;
+        string ComponentName;
+        string StatName;
+        object Value;
+        bool OverWrite;
     }
     [Serializable]
-    public class Level
+    public struct Level
     {
-        public string Desicription;
-        public IState[] States;
+        string Desicription;
+        IState[] States;
     };
     public Level[] Levels;
     //private void OnValidate()
     //{
     //    foreach (var level in Levels)
     //    {
-    //        for (var i = 0; i < level.States.Length; ++i)
+    //        for (var i = 0;i < level.States.Length ;++i)
     //        {
     //            var type = Type.GetType(level.States[i].ComponentName);
     //            Debug.Log(type);

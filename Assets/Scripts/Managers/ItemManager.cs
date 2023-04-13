@@ -1,8 +1,8 @@
 using System;
 using System.Collections.Generic;
-using System.Reflection;
+using UnityEditor;
 using UnityEngine;
-using UnityEngine.UIElements;
+using UnityEngine.Tilemaps;
 using Random = UnityEngine.Random;
 
 public class ItemManager : MonoBehaviour
@@ -20,7 +20,7 @@ public class ItemManager : MonoBehaviour
     private delegate void DeleteItemInChunk(int x, int y);
     private DeleteItemInChunk OnDeleteItemInChunk;
     private List<(int, int, byte)> ItemsData;
-    readonly private Dictionary<(int, int), List<(int, int, byte)>> SpawnedItems = new();
+    private Dictionary<(int, int), List<(int, int, byte)>> SpawnedItems = new();
     private int ChunkX, ChunkY;
     public static ItemManager Instance { get; private set; }
     public void Awake()
@@ -39,36 +39,23 @@ public class ItemManager : MonoBehaviour
         //Logic for what happens on pickup
         OnItemPickUp += (item, other) =>
         {
-            if (!other.TryGetComponent(typeof(ItemLevel), out var otherLevel)) otherLevel = other.gameObject.AddComponent<ItemLevel>();
-            Attribute data = item.GetComponent<ItemData>().itemdata;
+            Item data = item.GetComponent<ItemData>().itemdata;
             item.GetComponent<AudioSource>().PlayOneShot(data.PlayOnPickUp);
-            void OnTakeItem (Item itemdata)
+            //BUG: DOESNT UNSUBCRIBE, I think?
+            MenuHandeler.OnTakeItem += (itemdata) =>
             {
-                Attribute.Level[] levels = data.Levels;
-                if (levels == null || levels.Length == 0)
-                {   
-                    Destroy(item);
-                    return;
-                }
-                Dictionary<int, int> otherLevels = ((ItemLevel)otherLevel).ItemLevels;
-                if (!otherLevels.TryGetValue(data.ID, out int levelIndex)) { 
-                    otherLevels[data.ID] = 0;
-                    levelIndex = 0;
-                }
-                Attribute.Level levelData = levels[levelIndex];
-                foreach (var stat in levelData.States)
-                {
-                    Component component = other.GetComponent(Type.GetType(stat.ComponentName, false));
-                    FieldInfo property = component.GetType().GetField(stat.StatName);
-                    property.SetValue(component, stat.OverWrite ? Convert.ChangeType(stat.Value, property.GetValue(component).GetType()) : stat.Value + property.GetValue(component));
-                }
-                if(levelIndex + 1 < levels.Length) otherLevels[data.ID] = 1+levelIndex;
-                MenuHandler.OnTakeItem -= OnTakeItem;
-                SpawnedItems[(Mathf.FloorToInt(item.transform.position.x / ChunkX), Mathf.FloorToInt(item.transform.position.y / ChunkX))].Remove((Mathf.FloorToInt(item.transform.position.x), Mathf.FloorToInt(item.transform.position.y), (byte)itemdata.ID));
+
+                //Item.IState[] data = item.GetComponent<ItemData>()?.itemdata?.State;
+                //if (data == null) return;
+                //foreach (var stat in data)
+                //{
+                //    Component component = other.GetComponent(Type.GetType(stat.ComponentName, false));
+                //    FieldInfo property = component.GetType().GetField(stat.StatName);
+                //    property.SetValue(component, stat.OverWrite ? Convert.ChangeType(stat.Value, property.GetValue(component).GetType()) : stat.Value + property.GetValue(component));
+                //}
                 Destroy(item);
-            }
-            MenuHandler.OnTakeItem += OnTakeItem;
-            MenuHandler.Instance.ShowItemMenu(data);
+            };
+            MenuHandeler.Instance.ShowItemMenu(data);
         };
     }
 
@@ -87,7 +74,7 @@ public class ItemManager : MonoBehaviour
 
     private class ItemData : MonoBehaviour
     {
-        public Attribute itemdata;
+        public Item itemdata;
     }
 
     private class ItemTrigger : MonoBehaviour
@@ -99,59 +86,50 @@ public class ItemManager : MonoBehaviour
     }
     protected class ItemLevel : MonoBehaviour
     {
-        public Dictionary<int, int> ItemLevels = new();
+        Dictionary<int, int> Levels = new();
     }
 
     private GameObject Spawn(int x, int y, Item item)
     {
         
-        GameObject newItem = new(item.ItemName, new Type[] { typeof(SpriteRenderer), typeof(ItemTrigger), typeof(AudioSource) });
+        GameObject newItem = new GameObject(item.ItemName, new Type[] { typeof(SpriteRenderer), typeof(ItemTrigger), typeof(AudioSource) });
         SpriteRenderer newItemSprite = newItem.GetComponent<SpriteRenderer>();
         newItemSprite.sprite = item.ItemSprite;
-        newItemSprite.sortingOrder = 100;
         PolygonCollider2D newItemPolygonCollider = newItem.AddComponent<PolygonCollider2D>();
         newItemPolygonCollider.isTrigger = true;
         newItem.transform.SetParent(transform, false);
         newItem.transform.position = new Vector3(x, y);
-        if(item.GetType().IsSubclassOf(typeof(Attribute)) || item.GetType() == typeof(Attribute)) newItem.AddComponent<ItemData>().itemdata = (Attribute)item;
-        void delete (int PositionX, int PositionY)
+        newItem.AddComponent<ItemData>().itemdata = item;
+        OnDeleteItemInChunk += (PositionX, PositionY) =>
         {
             if(PositionX == x && PositionY == y) {
-                //Debug.Log($"Item Despawned x:{x} y:{y} x/chunkX:{Mathf.FloorToInt(x / ChunkX)} y/ChunkY:{Mathf.FloorToInt(y / ChunkX)} PositionX:{PositionX} PositionY:{PositionY} {Mathf.FloorToInt(x / ChunkX) == PositionX && Mathf.FloorToInt(y / ChunkX) == PositionY}");
-                //if (Mathf.FloorToInt(x / ChunkX) == PositionX && Mathf.FloorToInt(y / ChunkX) == PositionY) {
-                OnDeleteItemInChunk -= delete;
+            //Debug.Log($"Item Despawned x:{x} y:{y} x/chunkX:{Mathf.FloorToInt(x / ChunkX)} y/ChunkY:{Mathf.FloorToInt(y / ChunkX)} PositionX:{PositionX} PositionY:{PositionY} {Mathf.FloorToInt(x / ChunkX) == PositionX && Mathf.FloorToInt(y / ChunkX) == PositionY}");
+            //if (Mathf.FloorToInt(x / ChunkX) == PositionX && Mathf.FloorToInt(y / ChunkX) == PositionY) {
                 OnItemDespawned?.Invoke(newItem);
                 Destroy(newItem);
             }
         };
-        OnDeleteItemInChunk -= delete;
-        OnDeleteItemInChunk += delete;
         //Debug.Log($"Item spawned x:{x} y:{y} x/chunkX:{Mathf.FloorToInt(x / ChunkX)} y/ChunkY:{Mathf.FloorToInt(y / ChunkX)}");
         return newItem;
     }
     private void OnNewLoadChunk(int x, int y, byte data)
     {
-        TileMapData tileMapData = GenerateTileMap.Instance.baseTiles[data].GetComponent<TileMapData>();
+
         ItemsData = new List<(int, int, byte)>();
-        
+        int index = 0;
         foreach (var item in Items)
         {
-            if (tileMapData.MaxItemAmount <= ItemsData.Count) break;
+            index++;
             if (Random.Range(0f, 1f) > item.SpawnRate) continue;
-            int PositionX;
-            int PositionY;
-            do
-            {
-                PositionX = x * ChunkX + Random.Range(0, ChunkX);
-                PositionY = y * ChunkY + Random.Range(0, ChunkY);
-            } while (Physics.OverlapSphere(new Vector3Int(PositionX, PositionY), 1f).Length > 0);
+            int PositionX = x * ChunkX + Random.Range(0, ChunkX);
+            int PositionY = y * ChunkY + Random.Range(0, ChunkY);
             //GameObject itemObject = Spawn(PositionX, PositionY, item);
             //Debug.Log($"With Position x:{x} y:{y} PositionX:{PositionX} PositionY:{PositionY}");
             OnNewItemSpawned?.Invoke(item);
             //OnItemSpawned?.Invoke(itemObject);
-            ItemsData.Add((PositionX, PositionY, (byte)(item.ID)));
+            ItemsData.Add((PositionX, PositionY, (byte)(index - 1)));
         }
-        SpawnedItems[(x, y)] = ItemsData;
+        SpawnedItems.Add((x, y), ItemsData);
     }
 
     private void OnLoadChunk(int x, int y, byte _)
@@ -161,7 +139,6 @@ public class ItemManager : MonoBehaviour
             foreach (var item in ItemsData)
             {
                 GameObject itemObject = Spawn(item.Item1, item.Item2, Items[item.Item3]);
-                Debug.Log($"Item spawned: {itemObject.name} at pos x:{itemObject.transform.position.x} and pos y: {itemObject.transform.position.y}");
                 OnItemSpawned?.Invoke(itemObject);
             }
         }

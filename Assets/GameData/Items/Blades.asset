@@ -17,6 +17,6 @@ MonoBehaviour:
   ItemDescription: Main weapon for now
   ItemSprite: {fileID: 21300000, guid: d257e3849c7755c4199923446e901c04, type: 3}
   PlayOnPickUp: {fileID: 8300000, guid: 027a4688ea99f99448e8ce306844aa36, type: 3}
-  SpawnRate: 0.08
+  SpawnRate: 0.1
   Levels: []
   Damage: 0
