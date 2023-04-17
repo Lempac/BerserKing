@@ -18,7 +18,7 @@ MonoBehaviour:
   visibleWhenNotSelected: 1
   hideAutoControls: 1
   anchorShape: 0
-  controlShape: 0
+  controlShape: 1
   anchor: {r: 1, g: 0.3726415, b: 0.3726415, a: 1}
   anchorHighlighted: {r: 0.735849, g: 0.03818085, b: 0.03818085, a: 1}
   anchorSelected: {r: 1, g: 1, b: 1, a: 1}
@@ -31,6 +31,6 @@ MonoBehaviour:
   highlightedPath: {r: 1, g: 0.6, b: 0, a: 1}
   bounds: {r: 1, g: 1, b: 1, a: 0.4}
   segmentBounds: {r: 1, g: 1, b: 1, a: 0.4}
-  vertexPath: {r: 1, g: 1, b: 1, a: 1}
+  vertexPath: {r: 0.21960786, g: 0.21960786, b: 0.21960786, a: 1}
   normals: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   normalsLength: 0.198
