@@ -6,7 +6,6 @@ public class Wave : ScriptableObject
 {
     public string StartOn;
     public string EndOn;
-    public int MaxEntitys;
     [Serializable]
     public struct SpawnEntityInfo
     {
