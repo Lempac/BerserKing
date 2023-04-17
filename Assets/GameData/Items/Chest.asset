@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7e434f112c57244ba8f1ef9a69ae5aa, type: 3}
   m_Name: Chest
   m_EditorClassIdentifier: 
-  ID: 0
+  ID: 1
   ItemName: Chest
   ItemDescription: This is a chest
   ItemSprite: {fileID: 0}

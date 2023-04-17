@@ -10,7 +10,6 @@ public class EntityManager : MonoBehaviour
 
     public delegate void EntityDespawned();
     public event EntityDespawned OnEntityDespawned;
-<<<<<<< HEAD
     public delegate void WaveStarted();
     public event WaveStarted OnWaveStarted;
     public delegate void WaveEnded();
@@ -19,11 +18,6 @@ public class EntityManager : MonoBehaviour
     public int EntityLimit = 200;
     public List<Wave> waves;
     readonly private List<GameObject> Entitys;
-=======
-
-    public int EntityLimit = 200;
-    private List<GameObject> Entitys;
->>>>>>> 0f97433b9b0aae5f27bceb37da231ba96025beac
     public static EntityManager Instance { get; private set; }
     public void Awake()
     {
@@ -33,14 +27,9 @@ public class EntityManager : MonoBehaviour
     
     private void Spawn(Entity data)
     {
-<<<<<<< HEAD
         GameObject entity = new(data.name,new System.Type[] { });
         entity.AddComponent<SpriteRenderer>();
         entity.AddComponent<Animator>().runtimeAnimatorController = data.EntityAnimator;
-=======
-
-        GameObject entity = new GameObject(data.name,new System.Type[] { typeof(Animator), });
->>>>>>> 0f97433b9b0aae5f27bceb37da231ba96025beac
     }
 
 

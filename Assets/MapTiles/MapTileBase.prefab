@@ -244,7 +244,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: beaadd80fffd10c41bbcb41dbb01d060, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxItemAmount: 2
+  MaxItemAmount: 0
 --- !u!1 &6849347601771116592
 GameObject:
   m_ObjectHideFlags: 0
