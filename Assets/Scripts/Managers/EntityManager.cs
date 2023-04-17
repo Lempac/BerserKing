@@ -1,19 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class EntityManager : MonoBehaviour
 {
     public delegate void EntitySpawned();
     public event EntitySpawned OnEntitySpawned;
+
     public delegate void EntityDespawned();
     public event EntityDespawned OnEntityDespawned;
-    public delegate void WaveStart();
-    public event WaveStart OnWaveStart;
-    public delegate void WaveEnd();
-    public event WaveEnd OnWaveEnd;
+    public delegate void WaveStarted();
+    public event WaveStarted OnWaveStarted;
+    public delegate void WaveEnded();
+    public event WaveEnded OnWaveEnded;
 
     public int EntityLimit = 200;
+    public List<Wave> waves;
     readonly private List<GameObject> Entitys;
     public static EntityManager Instance { get; private set; }
     public void Awake()
@@ -24,8 +27,9 @@ public class EntityManager : MonoBehaviour
     
     private void Spawn(Entity data)
     {
-
-        GameObject entity = new(data.name,new System.Type[] { typeof(Animator), });
+        GameObject entity = new(data.name,new System.Type[] { });
+        entity.AddComponent<SpriteRenderer>();
+        entity.AddComponent<Animator>().runtimeAnimatorController = data.EntityAnimator;
     }
 
 
@@ -40,6 +44,17 @@ public class EntityManager : MonoBehaviour
 
     private void Start()
     {
-        //StartCoroutine(Spawer());
+        StartCoroutine(Spawer());
+        foreach (Wave wave in waves)
+        {
+            switch (wave.StartOn){
+                case "Start":
+                    
+                    break;
+                default:
+                    Debug.LogError($"Unknow Event: {wave.StartOn}");
+                    break;
+            }
+        }
     }
 }

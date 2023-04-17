@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using System.Reflection;
 using UnityEngine;
-using UnityEngine.UIElements;
 using Random = UnityEngine.Random;
 
 public class ItemManager : MonoBehaviour
@@ -42,16 +41,17 @@ public class ItemManager : MonoBehaviour
             if (!other.TryGetComponent(typeof(ItemLevel), out var otherLevel)) otherLevel = other.gameObject.AddComponent<ItemLevel>();
             Attribute data = item.GetComponent<ItemData>().itemdata;
             item.GetComponent<AudioSource>().PlayOneShot(data.PlayOnPickUp);
-            void OnTakeItem (Item itemdata)
+            void OnTakeItem(Item itemdata)
             {
                 Attribute.Level[] levels = data.Levels;
                 if (levels == null || levels.Length == 0)
-                {   
+                {
                     Destroy(item);
                     return;
                 }
                 Dictionary<int, int> otherLevels = ((ItemLevel)otherLevel).ItemLevels;
-                if (!otherLevels.TryGetValue(data.ID, out int levelIndex)) { 
+                if (!otherLevels.TryGetValue(data.ID, out int levelIndex))
+                {
                     otherLevels[data.ID] = 0;
                     levelIndex = 0;
                 }
@@ -62,7 +62,7 @@ public class ItemManager : MonoBehaviour
                     FieldInfo property = component.GetType().GetField(stat.StatName);
                     property.SetValue(component, stat.OverWrite ? Convert.ChangeType(stat.Value, property.GetValue(component).GetType()) : stat.Value + property.GetValue(component));
                 }
-                if(levelIndex + 1 < levels.Length) otherLevels[data.ID] = 1+levelIndex;
+                if (levelIndex + 1 < levels.Length) otherLevels[data.ID] = 1 + levelIndex;
                 MenuHandler.OnTakeItem -= OnTakeItem;
                 SpawnedItems[(Mathf.FloorToInt(item.transform.position.x / ChunkX), Mathf.FloorToInt(item.transform.position.y / ChunkX))].Remove((Mathf.FloorToInt(item.transform.position.x), Mathf.FloorToInt(item.transform.position.y), (byte)itemdata.ID));
                 Destroy(item);
@@ -74,7 +74,7 @@ public class ItemManager : MonoBehaviour
 
     private void OnUnloadChunk(int x, int y)
     {
-        if (SpawnedItems.TryGetValue((x,y), out ItemsData))
+        if (SpawnedItems.TryGetValue((x, y), out ItemsData))
         {
             foreach (var item in ItemsData)
             {
@@ -104,7 +104,7 @@ public class ItemManager : MonoBehaviour
 
     private GameObject Spawn(int x, int y, Item item)
     {
-        
+
         GameObject newItem = new(item.ItemName, new Type[] { typeof(SpriteRenderer), typeof(ItemTrigger), typeof(AudioSource) });
         SpriteRenderer newItemSprite = newItem.GetComponent<SpriteRenderer>();
         newItemSprite.sprite = item.ItemSprite;
@@ -113,10 +113,11 @@ public class ItemManager : MonoBehaviour
         newItemPolygonCollider.isTrigger = true;
         newItem.transform.SetParent(transform, false);
         newItem.transform.position = new Vector3(x, y);
-        if(item.GetType().IsSubclassOf(typeof(Attribute)) || item.GetType() == typeof(Attribute)) newItem.AddComponent<ItemData>().itemdata = (Attribute)item;
-        void delete (int PositionX, int PositionY)
+        if (item.GetType().IsSubclassOf(typeof(Attribute)) || item.GetType() == typeof(Attribute)) newItem.AddComponent<ItemData>().itemdata = (Attribute)item;
+        void delete(int PositionX, int PositionY)
         {
-            if(PositionX == x && PositionY == y) {
+            if (PositionX == x && PositionY == y)
+            {
                 //Debug.Log($"Item Despawned x:{x} y:{y} x/chunkX:{Mathf.FloorToInt(x / ChunkX)} y/ChunkY:{Mathf.FloorToInt(y / ChunkX)} PositionX:{PositionX} PositionY:{PositionY} {Mathf.FloorToInt(x / ChunkX) == PositionX && Mathf.FloorToInt(y / ChunkX) == PositionY}");
                 //if (Mathf.FloorToInt(x / ChunkX) == PositionX && Mathf.FloorToInt(y / ChunkX) == PositionY) {
                 OnDeleteItemInChunk -= delete;
@@ -133,7 +134,7 @@ public class ItemManager : MonoBehaviour
     {
         TileMapData tileMapData = GenerateTileMap.Instance.baseTiles[data].GetComponent<TileMapData>();
         ItemsData = new List<(int, int, byte)>();
-        
+
         foreach (var item in Items)
         {
             if (tileMapData.MaxItemAmount <= ItemsData.Count) break;

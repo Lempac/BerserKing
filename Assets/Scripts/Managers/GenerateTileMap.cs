@@ -46,7 +46,7 @@ public class GenerateTileMap : MonoBehaviour
     {
         foreach (var tile in tilemap.GetTilesBlock(bounds))
         {
-            if(tile != null) return true;   
+            if (tile != null) return true;
         }
         return false;
     }
@@ -60,7 +60,7 @@ public class GenerateTileMap : MonoBehaviour
             Tilemap currTileMap = (transform.Find(tile.name)?.GetComponent<Tilemap>()) ?? NewLayer(tile.gameObject);
             if (HasTiles(currTileMap, new BoundsInt(new Vector3Int(StartX, StartY), new Vector3Int(ChunkX, ChunkY, 1)))) return false;
             Tilemap currTileMapData = tile.GetComponent<Tilemap>();
-            currTileMap.SetTilesBlock(new BoundsInt(new Vector3Int(currTileMapData.cellBounds.position.x+StartX, currTileMapData.cellBounds.position.y + StartY), currTileMapData.cellBounds.size), currTileMapData.GetTilesBlock(currTileMapData.cellBounds));
+            currTileMap.SetTilesBlock(new BoundsInt(new Vector3Int(currTileMapData.cellBounds.position.x + StartX, currTileMapData.cellBounds.position.y + StartY), currTileMapData.cellBounds.size), currTileMapData.GetTilesBlock(currTileMapData.cellBounds));
         }
         Debug.Log($"Chunk {PositionX} : {PositionY} loaded!");
         return true;

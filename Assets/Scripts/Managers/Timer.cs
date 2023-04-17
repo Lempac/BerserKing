@@ -1,5 +1,4 @@
 using System;
-using System.Globalization;
 using TMPro;
 using UnityEngine;
 
@@ -11,22 +10,23 @@ public class Timer : MonoBehaviour
     public static event GameSecond OnGameSecond;
     public delegate void GameMinute(TimeSpan time);
     public static event GameMinute OnGameMinute;
-    readonly private string TimeFormat = "mm\\:ss";
+    public string TimeFormat = "mm\\:ss";
+    public TimeSpan Time;
     private void Awake()
     {
-        if (Instance == null)
-        Instance = this;
+        if (Instance != null) Debug.LogError("Only one Timer!");
+        else Instance = this;
     }
     void Start()
     {
-        TimeObject.text = new DateTime().ToString(TimeFormat);
+        if (TimeObject != null) TimeObject.text = new DateTime().ToString(TimeFormat);
         InvokeRepeating("OnSecond", 0,1);
     }
     private void OnSecond()
     {
-        TimeSpan currTime = TimeSpan.ParseExact(TimeObject.text, TimeFormat, CultureInfo.InvariantCulture).Add(new TimeSpan(0, 0, 1));
-        TimeObject.text = currTime.ToString(TimeFormat);
-        OnGameSecond?.Invoke(currTime);
-        if (currTime.Seconds % 60 == 0) OnGameMinute?.Invoke(currTime);
+        Time = Time.Add(new TimeSpan(0, 0, 1));
+        if(TimeObject != null) TimeObject.text = Time.ToString(TimeFormat);
+        OnGameSecond?.Invoke(Time);
+        if (Time.Seconds % 60 == 0) OnGameMinute?.Invoke(Time);
     }
 }

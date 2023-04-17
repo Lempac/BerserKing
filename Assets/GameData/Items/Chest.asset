@@ -15,6 +15,6 @@ MonoBehaviour:
   ID: 1
   ItemName: Chest
   ItemDescription: This is a chest
-  ItemSprite: {fileID: -116856484, guid: e967950ebe7577847ba7d90c54ec6fee, type: 3}
-  PlayOnPickUp: {fileID: 8300000, guid: 9686ffae79e4645489ecaec9ae3a4b27, type: 3}
-  SpawnRate: 0.1
+  ItemSprite: {fileID: 0}
+  PlayOnPickUp: {fileID: 0}
+  SpawnRate: 0
