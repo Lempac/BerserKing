@@ -13,10 +13,12 @@ MonoBehaviour:
   m_Name: Player
   m_EditorClassIdentifier: 
   ID: 0
+  Playable: 1
   Name: Player
   Description: Player entity
   Health: 100
   MaxHealth: 100
-  Speed: 20
+  Speed: 100
   MaxSpeed: 150
+  Damage: 0
   EntityAnimator: {fileID: 9100000, guid: cb50740c84349c0488f496b61a33bf9c, type: 2}

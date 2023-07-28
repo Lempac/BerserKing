@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Damage
   m_EditorClassIdentifier: 
   ID: 2
-  ItemName: Damage
-  ItemDescription: gives more damage
-  ItemSprite: {fileID: -1925368547, guid: 9f4c321692abd7445af0d6e1aedaadd8, type: 3}
+  Name: Damage
+  Description: Increse damage
+  Sprite: {fileID: -193294693, guid: e967950ebe7577847ba7d90c54ec6fee, type: 3}
   PlayOnPickUp: {fileID: 8300000, guid: 70d20dcd75601cb4783f80ad53cd9097, type: 3}
   SpawnRate: 0.2
   Levels: []

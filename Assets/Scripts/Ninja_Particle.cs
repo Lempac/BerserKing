@@ -13,10 +13,10 @@ public class Ninja_Particle : MonoBehaviour
     {
         events = particleSystem.GetCollisionEvents(other, colEvents);
 
-        if (other.TryGetComponent(out Enemy en))
-        {
-            en.TakeDamage(damage);
-        }
+        //if (other.TryGetComponent(out Enemy en))
+        //{
+        //    en.TakeDamage(damage);
+        //}
     }
 
     public void FlipYRotation()

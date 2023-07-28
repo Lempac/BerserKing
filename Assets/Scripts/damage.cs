@@ -7,11 +7,11 @@ public class Damage : MonoBehaviour
     public int playerHealth;
     public int maxHealth = 100;
     
-    public Health health;
+    //public Health health;
     private void Start()
     {
         playerHealth = maxHealth;
-        health.SetMaxHealth(maxHealth);
+        //health.SetMaxHealth(maxHealth);
     }
     async void DoDamage(Collision2D enemy)
     {
@@ -22,7 +22,7 @@ public class Damage : MonoBehaviour
             playerHealth -= damageperframe;
             await Task.Delay(500);
             cooldown = false;
-            health.SetHealth(playerHealth);
+            //health.SetHealth(playerHealth);
         }
     }
     

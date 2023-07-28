@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Blades
   m_EditorClassIdentifier: 
   ID: 0
-  ItemName: Blades
-  ItemDescription: Main weapon for now
-  ItemSprite: {fileID: 21300000, guid: d257e3849c7755c4199923446e901c04, type: 3}
+  Name: Blades
+  Description: 
+  Sprite: {fileID: 86427468, guid: e967950ebe7577847ba7d90c54ec6fee, type: 3}
   PlayOnPickUp: {fileID: 8300000, guid: 027a4688ea99f99448e8ce306844aa36, type: 3}
   SpawnRate: 0.1
   Levels: []

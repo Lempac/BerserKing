@@ -4,9 +4,9 @@ using UnityEngine;
 public class Item : ScriptableObject
 {
     public int ID;
-    public string ItemName;
-    public string ItemDescription;
-    public Sprite ItemSprite;
+    public string Name;
+    public string Description;
+    public Sprite Sprite;
     public AudioClip PlayOnPickUp;
     public float SpawnRate;
 }

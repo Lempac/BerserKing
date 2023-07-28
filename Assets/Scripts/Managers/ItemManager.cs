@@ -6,14 +6,37 @@ using Random = UnityEngine.Random;
 
 public class ItemManager : MonoBehaviour
 {
-    public delegate void ItemSpawned(GameObject item);
-    public event ItemSpawned OnItemSpawned;
-    public delegate void NewItemSpawned(Item item);
-    public event NewItemSpawned OnNewItemSpawned;
-    public delegate void ItemDespawned(GameObject item);
-    public event ItemDespawned OnItemDespawned;
-    public delegate void ItemPickUp(GameObject item, Collider2D howPickUp);
-    public event ItemPickUp OnItemPickUp;
+    //public delegate void ItemSpawned(GameObject item);
+    /// <summary>
+    /// Tigger when <c>Item</c> spawns.
+    /// </summary>
+    //public event ItemSpawned OnItemSpawned;
+    //public UnityEvent<GameObject> OnItemSpawned;
+    //public delegate void NewItemSpawned(Item item);
+    /// <summary>
+    /// Tigger when new <c>Item</c> spawns.
+    /// </summary>
+    //public event NewItemSpawned OnNewItemSpawned;
+    //public UnityEvent<Item> OnNewItemSpawned;
+    //public delegate void ItemDespawned(GameObject item);
+    /// <summary>
+    /// Tigger when <c>Item</c> despawns.
+    /// </summary>
+    //public event ItemDespawned OnItemDespawned;
+    //public UnityEvent<GameObject> OnItemDespawned;
+    //public delegate void ItemPickUp(GameObject item, Collider2D howPickUp);
+    //public event ItemPickUp OnItemPickUp;
+
+    [SerializeField] GameEvent OnItemSpawned;
+    [SerializeField] GameEvent OnNewItemSpawned;
+    [SerializeField] GameEvent OnItemDespawned;
+    //[SerializeField] GameEvent OnItemPickUp;
+
+    [SerializeField] GameEventListener OnNewLoadChunk;
+    [SerializeField] GameEventListener OnLoadChunk;
+    [SerializeField] GameEventListener OnUnloadChunk;
+    [SerializeField] GameEventListener OnTakeItem;
+
     public Item[] Items;
 
     private delegate void DeleteItemInChunk(int x, int y);
@@ -31,48 +54,60 @@ public class ItemManager : MonoBehaviour
     {
         ChunkX = GenerateTileMap.Instance.ChunkX;
         ChunkY = GenerateTileMap.Instance.ChunkY;
-        GenerateTileMap.OnNewLoadChunk += OnNewLoadChunk;
-        GenerateTileMap.OnLoadChunk += OnLoadChunk;
-        GenerateTileMap.OnUnloadChunk += OnUnloadChunk;
+        OnUnloadChunk.response.AddListener((_, rawData) =>
+        {
+            var data = ((int, int))rawData;
+            UnloadChunk(data.Item1, data.Item2);
+        });
+        OnLoadChunk.response.AddListener((_, rawData) =>
+        {
+            var data = ((int, int, byte))rawData;
+            LoadChunk(data.Item1, data.Item2, data.Item3);
+        });
+        OnNewLoadChunk.response.AddListener((_, rawData) =>
+        {
+            var data = ((int, int, byte))rawData;
+            NewLoadChunk(data.Item1, data.Item2, data.Item3);
+        });
 
         //Logic for what happens on pickup
-        OnItemPickUp += (item, other) =>
-        {
-            if (!other.TryGetComponent(typeof(ItemLevel), out var otherLevel)) otherLevel = other.gameObject.AddComponent<ItemLevel>();
-            Attribute data = item.GetComponent<ItemData>().itemdata;
-            item.GetComponent<AudioSource>().PlayOneShot(data.PlayOnPickUp);
-            void OnTakeItem(Item itemdata)
-            {
-                Attribute.Level[] levels = data.Levels;
-                if (levels == null || levels.Length == 0)
-                {
-                    Destroy(item);
-                    return;
-                }
-                Dictionary<int, int> otherLevels = ((ItemLevel)otherLevel).ItemLevels;
-                if (!otherLevels.TryGetValue(data.ID, out int levelIndex))
-                {
-                    otherLevels[data.ID] = 0;
-                    levelIndex = 0;
-                }
-                Attribute.Level levelData = levels[levelIndex];
-                foreach (var stat in levelData.States)
-                {
-                    Component component = other.GetComponent(Type.GetType(stat.ComponentName, false));
-                    FieldInfo property = component.GetType().GetField(stat.StatName);
-                    property.SetValue(component, stat.OverWrite ? Convert.ChangeType(stat.Value, property.GetValue(component).GetType()) : stat.Value + property.GetValue(component));
-                }
-                if (levelIndex + 1 < levels.Length) otherLevels[data.ID] = 1 + levelIndex;
-                MenuHandler.OnTakeItem -= OnTakeItem;
-                SpawnedItems[(Mathf.FloorToInt(item.transform.position.x / ChunkX), Mathf.FloorToInt(item.transform.position.y / ChunkX))].Remove((Mathf.FloorToInt(item.transform.position.x), Mathf.FloorToInt(item.transform.position.y), (byte)itemdata.ID));
-                Destroy(item);
-            }
-            MenuHandler.OnTakeItem += OnTakeItem;
-            MenuHandler.Instance.ShowItemMenu(data);
-        };
+        //OnItemPickUp += (item, other) =>
+        //{
+        //    if (!other.TryGetComponent(typeof(ItemLevel), out var otherLevel)) otherLevel = other.gameObject.AddComponent<ItemLevel>();
+        //    Attribute data = item.GetComponent<ItemData>().data;
+        //    item.GetComponent<AudioSource>().PlayOneShot(data.PlayOnPickUp);
+        //    void OnTakeItem(Item itemdata)
+        //    {
+        //        Attribute.Level[] levels = data.Levels;
+        //        if (levels == null || levels.Length == 0)
+        //        {
+        //            Destroy(item);
+        //            return;
+        //        }
+        //        Dictionary<int, int> otherLevels = ((ItemLevel)otherLevel).ItemLevels;
+        //        if (!otherLevels.TryGetValue(data.ID, out int levelIndex))
+        //        {
+        //            otherLevels[data.ID] = 0;
+        //            levelIndex = 0;
+        //        }
+        //        Attribute.Level levelData = levels[levelIndex];
+        //        foreach (var stat in levelData.States)
+        //        {
+        //            Component component = other.GetComponent(Type.GetType(stat.ComponentName, false));
+        //            FieldInfo property = component.GetType().GetField(stat.StatName);
+        //            property.SetValue(component, stat.OverWrite ? Convert.ChangeType(stat.Value, property.GetValue(component).GetType()) : stat.Value + property.GetValue(component));
+        //        }
+        //        if (levelIndex + 1 < levels.Length) otherLevels[data.ID] = 1 + levelIndex;
+        //        MenuHandler.OnTakeItem -= OnTakeItem;
+        //        SpawnedItems[(Mathf.FloorToInt(item.transform.position.x / ChunkX), Mathf.FloorToInt(item.transform.position.y / ChunkX))].Remove((Mathf.FloorToInt(item.transform.position.x), Mathf.FloorToInt(item.transform.position.y), (byte)itemdata.ID));
+        //        Destroy(item);
+        //    }
+        //    MenuHandler.OnTakeItem += OnTakeItem;
+        //    MenuHandler.Instance.ShowItemMenu(data);
+        //};
     }
 
-    private void OnUnloadChunk(int x, int y)
+    private void UnloadChunk(int x, int y)
     {
         if (SpawnedItems.TryGetValue((x, y), out ItemsData))
         {
@@ -84,36 +119,67 @@ public class ItemManager : MonoBehaviour
             }
         }
     }
-
-    private class ItemData : MonoBehaviour
+    private class Data : MonoBehaviour
     {
-        public Attribute itemdata;
+        public Attribute data;
     }
-
-    private class ItemTrigger : MonoBehaviour
+    private class Trigger : MonoBehaviour
     {
         private void OnTriggerStay2D(Collider2D collision)
         {
-            Instance.OnItemPickUp(gameObject, collision);
+
+            //Instance.OnItemPickUp(gameObject, collision);
+            if (!collision.TryGetComponent(typeof(Level), out var otherLevel)) otherLevel = collision.gameObject.AddComponent<Level>();
+            Attribute data = gameObject.GetComponent<Data>().data;
+            gameObject.GetComponent<AudioSource>().PlayOneShot(data.PlayOnPickUp);
+            Instance.OnTakeItem.responseOnce.AddListener((Component _, object rawData) =>
+            {
+                Item item = (Item)rawData;
+                Attribute.Level[] levels = data.Levels;
+                if (levels == null || levels.Length == 0)
+                {
+                    Debug.Log(gameObject.name);
+                    Destroy(gameObject);
+                    return;
+                }
+                Dictionary<int, int> otherLevels = ((Level)otherLevel).Levels;
+                if (!otherLevels.TryGetValue(data.ID, out int levelIndex))
+                {
+                    otherLevels[data.ID] = 0;
+                    levelIndex = 0;
+                }
+                Attribute.Level levelData = levels[levelIndex];
+                foreach (var stat in levelData.States)
+                {
+                    Component component = collision.GetComponent(Type.GetType(stat.ComponentName, false));
+                    FieldInfo property = component.GetType().GetField(stat.StatName);
+                    property.SetValue(component, stat.OverWrite ? Convert.ChangeType(stat.Value, property.GetValue(component).GetType()) : stat.Value + property.GetValue(component));
+                }
+                if (levelIndex + 1 < levels.Length) otherLevels[data.ID] = 1 + levelIndex;
+                Instance.SpawnedItems[(Mathf.FloorToInt(transform.position.x / Instance.ChunkX), Mathf.FloorToInt(transform.position.y / Instance.ChunkX))].Remove((Mathf.FloorToInt(transform.position.x), Mathf.FloorToInt(transform.position.y), (byte)item.ID));
+                Destroy(gameObject);
+            });
+            MenuHandler.Instance.ShowMenu(data);
         }
     }
-    protected class ItemLevel : MonoBehaviour
+
+    protected class Level : MonoBehaviour
     {
-        public Dictionary<int, int> ItemLevels = new();
+        public Dictionary<int, int> Levels = new();
     }
 
-    private GameObject Spawn(int x, int y, Item item)
+    public GameObject Spawn(int x, int y, Item item)
     {
 
-        GameObject newItem = new(item.ItemName, new Type[] { typeof(SpriteRenderer), typeof(ItemTrigger), typeof(AudioSource) });
+        GameObject newItem = new(item.Name, new Type[] { typeof(SpriteRenderer), typeof(Trigger), typeof(AudioSource) });
         SpriteRenderer newItemSprite = newItem.GetComponent<SpriteRenderer>();
-        newItemSprite.sprite = item.ItemSprite;
+        newItemSprite.sprite = item.Sprite;
         newItemSprite.sortingOrder = 100;
         PolygonCollider2D newItemPolygonCollider = newItem.AddComponent<PolygonCollider2D>();
         newItemPolygonCollider.isTrigger = true;
         newItem.transform.SetParent(transform, false);
         newItem.transform.position = new Vector3(x, y);
-        if (item.GetType().IsSubclassOf(typeof(Attribute)) || item.GetType() == typeof(Attribute)) newItem.AddComponent<ItemData>().itemdata = (Attribute)item;
+        if (item.GetType().IsSubclassOf(typeof(Attribute)) || item.GetType() == typeof(Attribute)) newItem.AddComponent<Data>().data = (Attribute)item;
         void delete(int PositionX, int PositionY)
         {
             if (PositionX == x && PositionY == y)
@@ -121,7 +187,7 @@ public class ItemManager : MonoBehaviour
                 //Debug.Log($"Item Despawned x:{x} y:{y} x/chunkX:{Mathf.FloorToInt(x / ChunkX)} y/ChunkY:{Mathf.FloorToInt(y / ChunkX)} PositionX:{PositionX} PositionY:{PositionY} {Mathf.FloorToInt(x / ChunkX) == PositionX && Mathf.FloorToInt(y / ChunkX) == PositionY}");
                 //if (Mathf.FloorToInt(x / ChunkX) == PositionX && Mathf.FloorToInt(y / ChunkX) == PositionY) {
                 OnDeleteItemInChunk -= delete;
-                OnItemDespawned?.Invoke(newItem);
+                OnItemDespawned.Raise(this, newItem);
                 Destroy(newItem);
             }
         };
@@ -130,7 +196,7 @@ public class ItemManager : MonoBehaviour
         //Debug.Log($"Item spawned x:{x} y:{y} x/chunkX:{Mathf.FloorToInt(x / ChunkX)} y/ChunkY:{Mathf.FloorToInt(y / ChunkX)}");
         return newItem;
     }
-    private void OnNewLoadChunk(int x, int y, byte data)
+    private void NewLoadChunk(int x, int y, byte data)
     {
         TileMapData tileMapData = GenerateTileMap.Instance.baseTiles[data].GetComponent<TileMapData>();
         ItemsData = new List<(int, int, byte)>();
@@ -148,14 +214,14 @@ public class ItemManager : MonoBehaviour
             } while (Physics.OverlapSphere(new Vector3Int(PositionX, PositionY), 1f).Length > 0);
             //GameObject itemObject = Spawn(PositionX, PositionY, item);
             //Debug.Log($"With Position x:{x} y:{y} PositionX:{PositionX} PositionY:{PositionY}");
-            OnNewItemSpawned?.Invoke(item);
+            OnNewItemSpawned.Raise(this, item);
             //OnItemSpawned?.Invoke(itemObject);
-            ItemsData.Add((PositionX, PositionY, (byte)(item.ID)));
+            ItemsData.Add((PositionX, PositionY, (byte)item.ID));
         }
         SpawnedItems[(x, y)] = ItemsData;
     }
 
-    private void OnLoadChunk(int x, int y, byte _)
+    private void LoadChunk(int x, int y, byte _)
     {
         if (SpawnedItems.TryGetValue((x, y), out ItemsData))
         {
@@ -163,7 +229,7 @@ public class ItemManager : MonoBehaviour
             {
                 GameObject itemObject = Spawn(item.Item1, item.Item2, Items[item.Item3]);
                 Debug.Log($"Item spawned: {itemObject.name} at pos x:{itemObject.transform.position.x} and pos y: {itemObject.transform.position.y}");
-                OnItemSpawned?.Invoke(itemObject);
+                OnItemSpawned.Raise(this, itemObject);
             }
         }
     }
