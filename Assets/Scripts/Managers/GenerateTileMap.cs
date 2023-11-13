@@ -1,11 +1,11 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.Tilemaps;
 
 public class GenerateTileMap : MonoBehaviour
 {
-    [SerializeField] private Transform player;
     public Grid[] baseTiles;
     readonly private Dictionary<(int, int), byte> data = new();
     public int ChunkX = 16, ChunkY = 16, LoadRange = 1, UnloadAfterChunk = 1;
@@ -13,13 +13,22 @@ public class GenerateTileMap : MonoBehaviour
 
     public static GenerateTileMap Instance { get; private set; }
 
-    public delegate void OnNewLoadChunkEvent(int x, int y, byte data);
-    public delegate void LoadChunkEvent(int x, int y, byte data);
-    public delegate void UnloadChunkEvent(int x, int y);
+    //public delegate void OnNewLoadChunkEvent(int x, int y, byte data);
+    //public delegate void LoadChunkEvent(int x, int y, byte data);
+    //public delegate void UnloadChunkEvent(int x, int y);
 
-    public static event LoadChunkEvent OnNewLoadChunk;
-    public static event LoadChunkEvent OnLoadChunk;
-    public static event UnloadChunkEvent OnUnloadChunk;
+    //public static event LoadChunkEvent OnNewLoadChunk;
+    //public static event LoadChunkEvent OnLoadChunk;
+    //public static event UnloadChunkEvent OnUnloadChunk;
+
+    //public UnityEvent<int, int, byte> OnNewLoadChunk;
+    //public UnityEvent<int, int, byte> OnLoadChunk;
+    //public UnityEvent<int, int> OnUnloadChunk;
+
+    [SerializeField] GameEvent OnNewLoadChunk;
+    [SerializeField] GameEvent OnLoadChunk;
+    [SerializeField] GameEvent OnUnloadChunk;
+
     public void Awake()
     {
         if (Instance != null) Debug.LogError("Only one GenerateTileMap!");
@@ -57,7 +66,7 @@ public class GenerateTileMap : MonoBehaviour
         int StartY = PositionY * ChunkY;
         foreach (Transform tile in baseTiles[ChunkData].transform)
         {
-            Tilemap currTileMap = (transform.Find(tile.name)?.GetComponent<Tilemap>()) ?? NewLayer(tile.gameObject);
+            Tilemap currTileMap = transform.Find(tile.name)?.GetComponent<Tilemap>() ?? NewLayer(tile.gameObject);
             if (HasTiles(currTileMap, new BoundsInt(new Vector3Int(StartX, StartY), new Vector3Int(ChunkX, ChunkY, 1)))) return false;
             Tilemap currTileMapData = tile.GetComponent<Tilemap>();
             currTileMap.SetTilesBlock(new BoundsInt(new Vector3Int(currTileMapData.cellBounds.position.x + StartX, currTileMapData.cellBounds.position.y + StartY), currTileMapData.cellBounds.size), currTileMapData.GetTilesBlock(currTileMapData.cellBounds));
@@ -96,16 +105,24 @@ public class GenerateTileMap : MonoBehaviour
             }
         }
     }
+    //private void OnDestroy()
+    //{
+    //    OnLoadChunk.RemoveAllListeners();
+    //    OnNewLoadChunk.RemoveAllListeners();
+    //    OnUnloadChunk.RemoveAllListeners();
+    //}
+
     private void FixedUpdate()
     {
-        int x = Mathf.FloorToInt(player.position.x / ChunkX), y = Mathf.FloorToInt(player.position.y / ChunkY);
+        if(EntityManager.Player == null) return;
+        int x = Mathf.FloorToInt(EntityManager.Player.transform.transform.position.x / ChunkX), y = Mathf.FloorToInt(EntityManager.Player.transform.position.y / ChunkY);
         for (int i = -LoadRange + x; i <= LoadRange + x; i++)
         {
             for (int j = -LoadRange + y; j <= LoadRange + y; j++)
             {
                 if (data.TryGetValue((i, j), out byte ChunkData))
                 {
-                    if (LoadChunk(i, j, ChunkData)) OnLoadChunk?.Invoke(i, j, ChunkData);
+                    if (LoadChunk(i, j, ChunkData)) OnLoadChunk.Raise(this, (i, j, ChunkData));
                 }
                 else
                 {
@@ -114,8 +131,8 @@ public class GenerateTileMap : MonoBehaviour
                     data.Add((i, j), f);
                     if (LoadChunk(i, j, f))
                     {
-                        OnNewLoadChunk?.Invoke(i, j, f);
-                        OnLoadChunk?.Invoke(i, j, f);
+                        OnNewLoadChunk.Raise(this, (i, j, f));
+                        OnLoadChunk.Raise(this, (i, j, f));
                     }
                 }
             }
@@ -125,7 +142,7 @@ public class GenerateTileMap : MonoBehaviour
             for (int j = -(LoadRange + UnloadAfterChunk) + y; j <= LoadRange + UnloadAfterChunk + y; j++)
             {
                 if (i >= -LoadRange + x && i <= LoadRange + x && j >= -LoadRange + y && j <= LoadRange + y) continue;
-                if (UnloadChunk(i, j)) OnUnloadChunk?.Invoke(i, j);
+                if (UnloadChunk(i, j)) OnUnloadChunk.Raise(this, (i, j));
             }
         }
     }

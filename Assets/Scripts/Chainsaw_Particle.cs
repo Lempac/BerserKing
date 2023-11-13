@@ -20,10 +20,10 @@ public class Chainsaw_Particle : MonoBehaviour
         if (timeSinceLastHit >= hitCooldown)
         {
             // Deal damage to enemies
-            if (other.TryGetComponent(out Enemy en))
-            {
-                en.TakeDamage(damage);
-            }
+            //if (other.TryGetComponent(out Enemy en))
+            //{
+            //    en.TakeDamage(damage);
+            //}
 
             // Reset time elapsed since last hit
             timeSinceLastHit = 0f;

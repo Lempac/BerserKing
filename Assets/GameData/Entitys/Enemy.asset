@@ -13,10 +13,12 @@ MonoBehaviour:
   m_Name: Enemy
   m_EditorClassIdentifier: 
   ID: 1
+  Playable: 0
   Name: Enemy
   Description: Main Test enemy
   Health: 20
   MaxHealth: 20
-  Speed: 15
+  Speed: 10
   MaxSpeed: 100
+  Damage: 2
   EntityAnimator: {fileID: 9100000, guid: 2b0036f51d257594ea5a0d67177ef359, type: 2}

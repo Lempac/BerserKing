@@ -12,7 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39f7bb29015dbe64b9674980b997a839, type: 3}
   m_Name: generalWave
   m_EditorClassIdentifier: 
-  StartOn: 
-  EndOn: 
-  MaxEntitys: 200
-  entities: []
+  StartOn:
+  - {fileID: 11400000, guid: 5827af4edecaa8d47b4f2c8f105af016, type: 2}
+  EndOn:
+  - {fileID: 11400000, guid: a01c0e97531973c4eb4cdc933ce805a4, type: 2}
+  entities:
+  - entity: {fileID: 11400000, guid: 9cdf2e6fdc5e8f54a86a8f150c6b4a55, type: 2}
+    Amount: 5

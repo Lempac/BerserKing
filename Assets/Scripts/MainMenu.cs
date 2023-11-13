@@ -1,14 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEditor.UI;
 using UnityEngine.Audio;
-using UnityEngine.UI;
 using TMPro;
+using System;
 
 public class MainMenu : MonoBehaviour
 {
+    public static bool DoDamageNumbers;
     [SerializeField] private AudioMixer main;
     [SerializeField] private GameObject Title, Version;
     public void Play()
@@ -25,7 +23,12 @@ public class MainMenu : MonoBehaviour
     }
     public void OnDamageNumbers(bool val)
     {
-        
+        DoDamageNumbers = val;
+    }
+    public void OnEntityLimiChange(string val)
+    {
+        if(Convert.ToInt32(val) > 0)
+        EntityManager.EntityLimit = Convert.ToInt32(val);
     }
     private void Start()
     {

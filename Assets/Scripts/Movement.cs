@@ -4,7 +4,6 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     public float Speed = 1f;
-    public Animator animator;
     
     public float HorizontalMove;
     public float VerticalMove;
@@ -16,9 +15,9 @@ public class Movement : MonoBehaviour
     private float DashingTime = 0.75f;
     private float DashingCooldown = 1f;
 
-    [SerializeField] private Animator an;
-    [SerializeField] private Rigidbody2D rb;
-    [SerializeField] private TrailRenderer tr;
+    public Animator an;
+    public Rigidbody2D rb;
+    public TrailRenderer tr;
 
     void Update()
     {

@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39f7bb29015dbe64b9674980b997a839, type: 3}
   m_Name: InitalWave
   m_EditorClassIdentifier: 
-  StartOn: Start
-  EndOn: 
+  StartOn:
+  - {fileID: 11400000, guid: 656f7aef83fa0ba4d99646a71d0d9a2e, type: 2}
+  EndOn: []
   entities:
   - entity: {fileID: 11400000, guid: 691f5ee6476b47d458f3ebe151bcc0e1, type: 2}
     Amount: 1
